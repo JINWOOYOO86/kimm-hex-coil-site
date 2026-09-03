@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 44" role="img" aria-label="핀튜브 열교환기">
+  <title>핀튜브 열교환기</title>
+  <!-- 핀(fin) — 관을 가로지르는 방열판 -->
+  <g stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity=".58">
+    <path d="M12 5V39M18 5V39M24 5V39M30 5V39M36 5V39"/>
+  </g>
+  <!-- 튜브(tube) — 핀 팩을 관통하는 사행(蛇行) 배관, U밴드는 핀 바깥 -->
+  <path d="M38 13H10A4.5 4.5 0 0 0 10 22H38A4.5 4.5 0 0 1 38 31H10"
+        fill="none" stroke="#FFFFFF" stroke-width="3.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
