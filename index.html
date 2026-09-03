@@ -148,11 +148,7 @@ a:hover{text-decoration:underline}
 }
 .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:32px}
 .hero-note{margin-top:16px; font-size:14px; color:var(--text-muted)}
-.hero-shot{
-  margin-top:52px; border-radius:var(--radius-lg);
-  border:1px solid var(--gray-300);
-  box-shadow:var(--shadow-lg); overflow:hidden; background:var(--white);
-}
+
 
 /* ── 지표 바 ─────────────────────────────────────────── */
 .stats{background:var(--kimm-blue); color:#fff}
@@ -222,6 +218,13 @@ h2{
 }
 .shot img{width:100%}
 .shot.tall{max-width:392px; margin-inline:auto}
+/*  ③ 유체 조건 — 화면 안 입력 라벨이 많아 절반 칸(1fr)로는 글씨가 작다.
+    이 줄만 글 위·그림 아래로 쌓아 그림을 판면 전체 폭(--maxw)까지 키운다
+    (2026-09-03(12차) "좌우 한계까지 키워서 글씨를 잘 보이게" 요청).
+    txt 는 전체 폭으로 늘어나면 한 줄이 너무 길어져 오히려 읽기 나빠지므로
+    읽기 좋은 폭(720px, .sec-head 와 같은 값)에서 멈춘다. */
+.feat.full{grid-template-columns:1fr; gap:28px}
+.feat.full .txt{max-width:720px}
 .shot figcaption{
   padding:11px 14px; font-size:13px; color:var(--text-muted);
   background:var(--gray-50); border-top:1px solid var(--border); text-align:center;
@@ -337,7 +340,6 @@ h2{
   .nav a:not(.btn){display:none}
   .hdr .wrap{gap:12px}
   .hero .wrap{padding-top:52px}
-  .hero-shot{margin-top:38px}
   .stats .wrap{grid-template-columns:repeat(2,1fr); gap:26px 8px}
   .feat,.mob,.valid{grid-template-columns:1fr; gap:32px}
   .feat.rev .txt{order:0}
@@ -402,10 +404,11 @@ h2{
         <a class="btn btn-ghost" href="#features">기능 살펴보기</a>
       </div>
       <p class="hero-note">한국기계연구원 히트펌프연구센터 개발 · 설계·해석·연구·교육 목적으로 이용하실 수 있습니다.</p>
-      <div class="hero-shot">
-        <img src="assets/hero.webp" width="2000" height="833"
-             alt="KIMM-HEX Coil 결과 화면 — 용량·압력강하·제습량 KPI와 습공기선도·P-h 선도, 회로별 유량 분배가 한 화면에 표시된다.">
-      </div>
+      <!--  2026-09-03(7차): 히어로의 **결과 화면 컷(assets/hero.webp = Result ① 성능요약)** 을 뺐다.
+            모바일 판(m.html)에는 없던 것이라 두 판의 읽는 순서가 어긋났고, 기능 절에서
+            ⑤ 성능요약 화면을 다시 보여주므로 같은 그림이 지면 위아래로 두 번 나왔다.
+            히어로 → 지표 → 단계 → 기능(①~⑥) 순서는 이제 두 판이 같다.
+            (og:image 는 그대로 hero.webp — 공유 카드 썸네일이라 본문과 무관하다) -->
     </div>
   </div>
 
@@ -490,7 +493,7 @@ h2{
         </figure>
       </div>
 
-      <div class="feat">
+      <div class="feat full">
         <div class="txt">
           <span class="idx">3</span>
           <h3>유체 조건 — 작동유체 58종</h3>
@@ -502,7 +505,7 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img src="assets/fluid.webp" width="1400" height="887" loading="lazy"
+          <img src="assets/fluid.webp" width="1400" height="579" loading="lazy"
                alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
           <figcaption>③ 유체 조건 — 공기 입구상태 5방식 · 작동유체 58종</figcaption>
         </figure>
