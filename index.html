@@ -428,12 +428,12 @@ h2{
         <p>화면 왼쪽 순서대로 진행하면 형상 입력에서 분포 해석까지 이어집니다.</p>
       </div>
       <div class="steps">
-        <div class="step"><div class="num">1</div><h3>HX Dimension</h3><p>튜브·핀 형상<br>열수·단수·피치</p></div>
-        <div class="step"><div class="num">2</div><h3>Circuit</h3><p>냉매 배관<br>드래그 연결</p></div>
-        <div class="step"><div class="num">3</div><h3>Fluid</h3><p>공기·냉매<br>운전조건</p></div>
+        <div class="step"><div class="num">1</div><h3>형상 입력</h3><p>튜브·핀 형상<br>열수·단수·피치</p></div>
+        <div class="step"><div class="num">2</div><h3>냉매 회로</h3><p>배관 드래그<br>분지·합지</p></div>
+        <div class="step"><div class="num">3</div><h3>유체 조건</h3><p>공기 입구상태<br>작동유체 58종</p></div>
         <div class="step"><div class="num">4</div><h3>풍량 분포</h3><p>팬 비균일<br>2D·3D 프리뷰</p></div>
-        <div class="step"><div class="num">5</div><h3>Result ①</h3><p>성능 요약<br>선도·상태표</p></div>
-        <div class="step"><div class="num">6</div><h3>Result ②</h3><p>면·열별<br>분포 컬러맵</p></div>
+        <div class="step"><div class="num">5</div><h3>성능요약</h3><p>용량·압력강하<br>선도·상태표</p></div>
+        <div class="step"><div class="num">6</div><h3>분포맵</h3><p>면별·열별<br>분포 컬러맵</p></div>
       </div>
     </div>
   </section>
@@ -447,10 +447,35 @@ h2{
         <p>정해진 회로 템플릿에 형상을 맞추는 대신, 원하는 회로를 그려놓고 그 결과를 봅니다.</p>
       </div>
 
+      <!--  2026-09-03: 스텝 1~6 화면을 **모두** 싣는다(사용자 요청).
+            종전에는 ②회로 · ⑤성능요약 · ④풍량 · ⑥분포맵 네 장뿐이고
+            ①형상 입력 · ③유체 조건 화면이 없었다. 번호는 프로그램 사이드바
+            (1 형상 입력 › 2 냉매 회로 › 3 유체 조건 › 4 풍량 분포 › 계산 ›
+             5 성능요약 › 6 분포맵)와 일대일로 맞춘다.
+            ⚠️ '실제 치수 비율로 렌더링하고 U-bend 표시' 는 종전 ⑥ 항목에 붙어
+               있었으나 3D 형상 렌더 설명이므로 ① 로 옮겼다. -->
       <div class="feat">
         <div class="txt">
           <span class="idx">1</span>
-          <h3>드래그로 그리는 냉매 회로</h3>
+          <h3>형상 입력 — 치수를 넣으면 3D로 즉시 확인</h3>
+          <ul>
+            <li>튜브 길이·열수·단수·피치·외경을 넣으면 <b>3D 형상이 곧바로 갱신</b>됩니다.</li>
+            <li>실제 치수 비율로 렌더링하고 L·W·H·OD·핀피치를 치수선으로 함께 표시합니다.</li>
+            <li>엇갈림 배열과 관 단면(내경)까지 그려 <b>배관 배열을 눈으로 확인</b>합니다.</li>
+            <li>평판핀·루버핀을 고르면 루버 치수(Lp·Lh)와 해당 상관식이 함께 나타납니다.</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="assets/dimension.webp" width="1200" height="1125" loading="lazy"
+               alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
+          <figcaption>① 형상 입력 — L · W · H · OD · 핀피치를 3D로 확인</figcaption>
+        </figure>
+      </div>
+
+      <div class="feat rev">
+        <div class="txt">
+          <span class="idx">2</span>
+          <h3>냉매 회로 — 드래그로 그린다</h3>
           <ul>
             <li>튜브를 드래그해 배관을 연결하고, <b>분지(split)·합지(merge)</b>를 임의로 구성합니다.</li>
             <li>전 튜브 1회 포함·순환 발생 여부를 실시간으로 검증합니다.</li>
@@ -461,14 +486,49 @@ h2{
         <figure class="shot tall">
           <img src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
                alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
-          <figcaption>회로 편집 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
+          <figcaption>② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
+        </figure>
+      </div>
+
+      <div class="feat">
+        <div class="txt">
+          <span class="idx">3</span>
+          <h3>유체 조건 — 작동유체 58종</h3>
+          <ul>
+            <li>공기 입구상태는 건구온도에 <b>습구온도·상대습도·절대습도·엔탈피·노점</b> 중 하나를 더해 지정합니다.</li>
+            <li>작동유체는 <b>58종</b>(물·공기·R717·R744·R290·R410A·R134a·R1234yf 등)에서 고릅니다 — 물성은 CoolProp 기반입니다.</li>
+            <li>냉매 입구는 물 조건, 직접 지정(압력 + 온도 또는 건도), 증발기 모드(응축기 출구 기준) 중에서 정합니다.</li>
+            <li>단상·2상 열전달과 압력강하 상관식을 각각 선택합니다.</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="assets/fluid.webp" width="1400" height="887" loading="lazy"
+               alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
+          <figcaption>③ 유체 조건 — 공기 입구상태 5방식 · 작동유체 58종</figcaption>
         </figure>
       </div>
 
       <div class="feat rev">
         <div class="txt">
-          <span class="idx">2</span>
-          <h3>격자 단위 성능 예측</h3>
+          <span class="idx">4</span>
+          <h3>풍량 분포 — 팬 비균일 반영</h3>
+          <ul>
+            <li>중앙은 강하고 가장자리는 약한 <b>실제 팬 토출 분포</b>를 반영합니다.</li>
+            <li>입구면 셀별로 공기 조건을 차등 적용합니다.</li>
+            <li>2D·3D 프리뷰로 분포를 확인한 뒤 계산에 넣습니다.</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="assets/airflow.webp" width="1600" height="543" loading="lazy"
+               alt="풍량 분포 화면 — 입구면의 풍속 분포가 2차원 컨투어와 3차원 곡면으로 표시된다.">
+          <figcaption>④ 풍량 분포 — 팬 σ · floor · β 로 비균일 조절</figcaption>
+        </figure>
+      </div>
+
+      <div class="feat">
+        <div class="txt">
+          <span class="idx">5</span>
+          <h3>성능 요약 — 격자 단위 예측</h3>
           <ul>
             <li>높이·깊이·길이 <b>3방향으로 격자를 분할</b>해 셀별로 해석합니다.</li>
             <li>셀별 국소 열전달과 압력강하를 각각 계산합니다.</li>
@@ -479,44 +539,26 @@ h2{
         <figure class="shot">
           <img src="assets/result1.webp" width="1400" height="1131" loading="lazy"
                alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
-          <figcaption>Result ① — 용량 · 압력강하 · 제습량 · 회로별 유량 분배</figcaption>
-        </figure>
-      </div>
-
-      <div class="feat">
-        <div class="txt">
-          <span class="idx">3</span>
-          <h3>팬 풍량 비균일 반영</h3>
-          <ul>
-            <li>중앙은 강하고 가장자리는 약한 <b>실제 팬 토출 분포</b>를 반영합니다.</li>
-            <li>입구면 셀별로 공기 조건을 차등 적용합니다.</li>
-            <li>2D·3D 프리뷰로 분포를 확인한 뒤 계산에 넣습니다.</li>
-          </ul>
-        </div>
-        <figure class="shot">
-          <img src="assets/airflow.webp" width="1600" height="563" loading="lazy"
-               alt="풍량 분포 화면 — 입구면의 풍속 분포가 2차원 컨투어와 3차원 곡면으로 표시된다.">
-          <figcaption>풍량 분포 — 팬 σ · floor · β 로 비균일 조절</figcaption>
+          <figcaption>⑤ 성능요약 — 용량 · 압력강하 · 제습량 · 회로별 유량 분배</figcaption>
         </figure>
       </div>
 
       <div class="feat rev">
         <div class="txt">
-          <span class="idx">4</span>
-          <h3>면·열별 분포를 컬러맵으로</h3>
+          <span class="idx">6</span>
+          <h3>분포맵 — 면·열별 컬러맵</h3>
           <ul>
             <li>공기 입구면에서 출구면까지, 냉매 열별 분포를 표시합니다.</li>
             <li>온도·유량·상태량을 색으로 구분해 <b>성능 취약 구간을 즉시 식별</b>합니다.</li>
-            <li>실제 치수 비율로 렌더링하고 U-bend를 함께 표시합니다.</li>
+            <li>면별·열별을 골라 보고, 상세 분포는 컨투어로 다시 그립니다.</li>
           </ul>
         </div>
         <figure class="shot">
           <img src="assets/result2.webp" width="1400" height="1131" loading="lazy"
                alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
-          <figcaption>Result ② — 면·열별 분포 컬러맵</figcaption>
+          <figcaption>⑥ 분포맵 — 면·열별 분포 컬러맵</figcaption>
         </figure>
       </div>
-    </div>
   </section>
 
   <!-- 모바일 -->
