@@ -3,6 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  모바일 판이 따로 있다 — 검색엔진에도 알린다(별도 URL 방식의 표준 처리). -->
+<link rel="alternate" media="only screen and (max-width: 640px)" href="m.html">
+<script>
+/*  모바일 접속이면 모바일 판으로 자동 전환.
+    · 판정 = 좁은 화면 또는 모바일 UA
+    · `?desktop=1` 로 들어오면 이 세션 동안 전환을 끈다(m.html 의 '데스크톱 버전 보기' 링크)
+    ⚠️ m.html 은 반대 방향 자동 전환을 하지 않는다 — 두 페이지가 서로 넘기면 루프가 된다.
+    ⚠️ <head> 맨 앞에 두어야 본문이 그려지기 전에 넘어간다(화면 깜빡임 방지).           */
+(function () {
+  try {
+    if (/[?&]desktop=1/.test(location.search)) { sessionStorage.setItem('hx-view', 'desktop'); return; }
+    if (sessionStorage.getItem('hx-view') === 'desktop') return;
+    var narrow = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
+    var ua = /Android|iPhone|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (narrow || ua) location.replace('m.html' + location.hash);
+  } catch (e) { /* 저장소가 막힌 브라우저면 그냥 데스크톱 판을 보여 준다 */ }
+})();
+</script>
 <title>KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램 | 한국기계연구원</title>
 <meta name="description" content="형상·냉매회로·운전조건을 입력하면 용량·압력강하·제습량을 산출합니다. 작동유체 58종, 공기측 열전달 상관식 13종, 자체 실험 124케이스 검증, 설치 없이 웹 브라우저에서 사용. 한국기계연구원 히트펌프연구센터.">
 <meta name="author" content="한국기계연구원 히트펌프연구센터">
