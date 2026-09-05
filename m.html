@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램 | 한국기계연구원</title>
-<meta name="description" content="형상·냉매회로·운전조건을 입력하면 용량·압력강하·제습량을 산출합니다. 작동유체 58종, 공기측 열전달 상관식 13종, 자체 실험 124케이스 검증. 한국기계연구원 히트펌프연구센터.">
+<meta name="description" content="형상·냉매 회로·운전 조건을 입력하면 용량·압력강하·제습량을 산출합니다. 작동유체 70종(부동액 포함), 공기측 열전달 상관식 13종, 자체 실험 124케이스 검증. 한국기계연구원 히트펌프연구센터.">
 <meta name="author" content="한국기계연구원 히트펌프연구센터">
 <meta name="theme-color" content="#1B3281">
 <meta property="og:title" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램">
@@ -217,19 +217,19 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <img class="wm" src="assets/wordmark-kimm-hex-coil.svg" alt="KIMM-HEX Coil">
       </div>
       <p class="tagline">설계는 자유롭게,<br>결과는 직관적으로.</p>
-      <p class="deffn">형상 · 냉매회로 · 운전조건 입력<span class="ar">→</span>용량 · 압력강하 · 제습량 산출</p>
-      <p class="lede">정해진 템플릿에 형상을 맞추는 대신 <b>원하는 회로를 그려놓고 그 회로 그대로</b>
+      <p class="deffn">형상·냉매 회로·운전 조건 입력<span class="ar">→</span>용량 · 압력강하 · 제습량 산출</p>
+      <p class="lede"><b>형상과 회로를 직접 구성</b>하고, 유효성 검사를 통과한 회로로
          계산합니다. 설치 절차 없이 웹 브라우저에서 바로 씁니다.</p>
-      <a class="btn btn-primary" href="#contact">접속주소·계정 발급 문의</a>
+      <a class="btn btn-primary" href="#contact">문의 · 협력 제안</a>
       <a class="btn btn-ghost" href="#features">기능 살펴보기</a>
-      <p class="note">한국기계연구원 히트펌프연구센터 개발 · 설계·해석·연구·교육 목적으로 이용하실 수 있습니다.</p>
+      <p class="note">한국기계연구원 히트펌프연구센터 개발</p>
     </div>
   </div>
 
   <!-- 지표 -->
   <div class="stats">
     <div class="g">
-      <div class="stat"><div class="n">58<small>종</small></div><div class="l">작동유체 지원<br>자연냉매 · 공기 포함</div></div>
+      <div class="stat"><div class="n">70<small>종</small></div><div class="l">작동유체 지원<br>자연냉매 · 공기 · 부동액 포함</div></div>
       <div class="stat"><div class="n">124<small>케이스</small></div><div class="l">자체 실험 검증<br>물 · R134a · R1234yf · R410A</div></div>
       <div class="stat"><div class="n">13<small>종</small></div><div class="l">공기측 열전달 상관식<br>평판핀 8 · 루버핀 5</div></div>
       <div class="stat"><div class="n">3<small>방향</small></div><div class="l">격자 분할 해석<br>셀별 국소 상태 산출</div></div>
@@ -245,10 +245,10 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <div class="steps">
         <div class="step"><div class="num">1</div><h3>형상 입력</h3><p>튜브·핀 형상<br>열수·단수·피치</p></div>
         <div class="step"><div class="num">2</div><h3>냉매 회로</h3><p>배관 드래그<br>분지·합지</p></div>
-        <div class="step"><div class="num">3</div><h3>유체 조건</h3><p>공기 입구상태<br>작동유체 58종</p></div>
+        <div class="step"><div class="num">3</div><h3>유체 조건</h3><p>공기 입구 상태<br>작동유체 70종</p></div>
         <div class="step"><div class="num">4</div><h3>풍량 분포</h3><p>팬 비균일<br>2D·3D 프리뷰</p></div>
-        <div class="step"><div class="num">5</div><h3>성능요약</h3><p>용량·압력강하<br>선도·상태표</p></div>
-        <div class="step"><div class="num">6</div><h3>분포맵</h3><p>면별·열별<br>분포 컬러맵</p></div>
+        <div class="step"><div class="num">5</div><h3>결과 ①</h3><p>성능 요약<br>용량·압력강하</p></div>
+        <div class="step"><div class="num">6</div><h3>결과 ②</h3><p>면/열별 분포<br>컬러맵</p></div>
       </div>
     </div>
   </section>
@@ -277,7 +277,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
           <li>평판핀·루버핀을 고르면 루버 치수(Lp·Lh)와 해당 상관식이 함께 나타납니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/dimension.webp" width="1200" height="1125" loading="lazy"
+          <img src="assets/dimension.webp" width="1200" height="940" loading="lazy"
                alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
           <figcaption>① 형상 입력 — L · W · H · OD · 핀피치를 3D로 확인</figcaption>
         </figure>
@@ -287,31 +287,30 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <span class="idx">2</span>
         <h3>냉매 회로 — 드래그로 그린다</h3>
         <ul>
-          <li>튜브를 드래그해 배관을 연결하고, <b>분지(split)·합지(merge)</b>를 임의로 구성합니다.</li>
-          <li>전 튜브 1회 포함·순환 발생 여부를 실시간으로 검증합니다.</li>
-          <li>연결하지 않은 튜브는 <b>독립 1튜브 회로</b>로 자동 처리합니다.</li>
+          <li>튜브를 드래그해 배관을 연결하고, <b>분지(split)·합지(merge)</b>를 구성합니다(비순환 회로).</li>
+          <li>순환·중복 연결을 실시간으로 검사하고, 연결하지 않은 튜브는 <b>독립 1튜브 회로</b>로 자동 처리합니다.</li>
           <li>유량 분배는 <b>ΔP 균일화(반복 자기분배)</b> 또는 균등 분배 중 선택합니다.</li>
         </ul>
         <figure class="shot tall">
           <img src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
                alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
-          <figcaption>② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
+          <figcaption>② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-벤드 실선/점선 구분</figcaption>
         </figure>
       </div>
 
       <div class="feat">
         <span class="idx">3</span>
-        <h3>유체 조건 — 작동유체 58종</h3>
+        <h3>유체 조건 — 작동유체 70종</h3>
         <ul>
-          <li>공기 입구상태는 건구온도에 <b>습구온도·상대습도·절대습도·엔탈피·노점</b> 중 하나를 더해 지정합니다.</li>
-          <li>작동유체는 <b>58종</b>(물·공기·R717·R744·R290·R410A·R134a·R1234yf 등)에서 고릅니다 — 물성은 CoolProp 기반입니다.</li>
-          <li>냉매 입구는 물 조건, 직접 지정(압력 + 온도 또는 건도), 증발기 모드(응축기 출구 기준) 중에서 정합니다.</li>
+          <li>공기 입구 상태는 건구온도에 <b>습구온도·상대습도·절대습도·엔탈피·노점</b> 중 하나를 더해 지정합니다.</li>
+          <li>작동유체는 <b>70종</b>(물·공기·R717·R744·R290·R410A·R134a·R1234yf·<b>부동액 EG·PG 수용액</b> 등)에서 고릅니다 — 물성은 CoolProp 기반입니다.</li>
+          <li>단상 유체는 입구 압력·온도·유량을 직접 넣고, 냉매는 <b>직접(P · T/건도)</b>, <b>증발기(응축기 출구 기준, 입구압 지정)</b>, <b>증발기(입구 엔탈피 · 출구압 지정)</b> 중에서 고릅니다.</li>
           <li>단상·2상 열전달과 압력강하 상관식을 각각 선택합니다.</li>
         </ul>
         <figure class="shot">
           <img src="assets/fluid.webp" width="1400" height="720" loading="lazy"
                alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
-          <figcaption>③ 유체 조건 — 공기 입구상태 5방식 · 작동유체 58종</figcaption>
+          <figcaption>③ 유체 조건 — 공기 입구 상태 5방식 · 작동유체 70종</figcaption>
         </figure>
       </div>
 
@@ -319,14 +318,17 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <span class="idx">4</span>
         <h3>풍량 분포 — 팬 비균일 반영</h3>
         <ul>
-          <li>중앙은 강하고 가장자리는 약한 <b>실제 팬 토출 분포</b>를 반영합니다.</li>
+          <li>중앙은 강하고 가장자리는 약한 팬 토출 분포를 <b>가우시안·링 모델</b>로 모사합니다.</li>
           <li>입구면 셀별로 공기 조건을 차등 적용합니다.</li>
           <li>2D·3D 프리뷰로 분포를 확인한 뒤 계산에 넣습니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/airflow.webp" width="1600" height="543" loading="lazy"
-               alt="풍량 분포 화면 — 입구면의 풍속 분포가 2차원 컨투어와 3차원 곡면으로 표시된다.">
-          <figcaption>④ 풍량 분포 — 팬 σ · floor · β 로 비균일 조절</figcaption>
+          <!--  2026-09-05: ④ 를 3D 단독으로 교체(1600x543 → 1400x894).
+                프로그램 ④ 화면이 [3D | 2D] 나란히로 바뀌었는데 3D 가 훨씬 높아
+                화면 전체를 오리면 오른쪽 아래가 크게 빈다 → 3D 원본을 쓴다. -->
+          <img src="assets/airflow.webp" width="1400" height="894" loading="lazy"
+               alt="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
+          <figcaption>④ 풍량 분포 — 코일 입구면 면속도 3D · 팬 σ · floor · β 로 비균일 조절</figcaption>
         </figure>
       </div>
 
@@ -340,24 +342,24 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
           <li>결과는 습공기선도·P-h 선도와 회로별 유량 분배로 함께 제시됩니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/result1.webp" width="1400" height="1131" loading="lazy"
+          <img src="assets/result1.webp" width="1400" height="932" loading="lazy"
                alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
-          <figcaption>⑤ 성능요약 — 용량 · 압력강하 · 제습량 · 회로별 유량 분배</figcaption>
+          <figcaption>⑤ 결과 ① — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
         </figure>
       </div>
 
       <div class="feat">
         <span class="idx">6</span>
-        <h3>분포맵 — 면·열별 컬러맵</h3>
+        <h3>결과 ② — 면/열별 컬러맵</h3>
         <ul>
           <li>공기 입구면에서 출구면까지, 냉매 열별 분포를 표시합니다.</li>
-          <li>온도·유량·상태량을 색으로 구분해 <b>성능 취약 구간을 즉시 식별</b>합니다.</li>
-          <li>면별·열별을 골라 보고, 상세 분포는 컨투어로 다시 그립니다.</li>
+          <li>온도·유량·상태량을 색으로 구분해 <b>분포 차이가 큰 구간을 시각적으로 비교</b>합니다.</li>
+          <li>면/열별을 골라 보고, 상세 분포는 컨투어로 다시 그립니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/result2.webp" width="1400" height="1131" loading="lazy"
+          <img src="assets/result2.webp" width="1400" height="1421" loading="lazy"
                alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
-          <figcaption>⑥ 분포맵 — 면·열별 분포 컬러맵</figcaption>
+          <figcaption>⑥ 결과 ② — 면/열별 분포 컬러맵</figcaption>
         </figure>
       </div>
     </div>
@@ -367,13 +369,14 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
   <section>
     <div class="wrap">
       <p class="kicker">Mobile</p>
-      <h2>현장에서는 운전조건만 바꿔 계산</h2>
-      <p class="sub">휴대폰 전용 화면에서 케이스를 고르고 운전조건·냉매 분배방식·풍량 분포만 수정해
-         바로 계산합니다. <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.</p>
+      <h2>휴대폰에서도 설계 전체를</h2>
+      <p class="sub">휴대폰 전용 화면에서 <b>형상 · 회로 · 유체 · 상관식 · 풍량</b>을 모두 편집하고
+         <b>성능 요약과 면/열별 분포</b>까지 봅니다. <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.</p>
       <div class="chips">
-        <span class="chip">최근 계산 KPI</span>
+        <span class="chip">형상·회로 편집</span>
         <span class="chip">탭으로 회로 연결</span>
-        <span class="chip">결과·상태표</span>
+        <span class="chip">면/열별 분포</span>
+        <span class="chip">엑셀 내보내기</span>
         <span class="chip">홈 화면에 추가</span>
       </div>
       <figure class="shot" style="max-width:280px;margin:16px auto 0">
@@ -381,7 +384,6 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
              alt="모바일 화면 — 최근 계산 KPI 카드와 케이스 요약">
         <figcaption>모바일 화면</figcaption>
       </figure>
-      <p class="note">형상 편집·면별 분포·엑셀 내보내기는 데스크톱 화면에서 제공합니다.</p>
     </div>
   </section>
 
@@ -393,18 +395,18 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="sub">v1.0 기준입니다.</p>
       <table class="spec">
         <tbody>
-          <tr><th>작동유체</th><td><b>58종</b> — 물 · 공기 · R717 · R744(CO<sub>2</sub>) · R290 · R410A ·
-            R134a · R1234yf 등 (CoolProp 물성 기반)</td></tr>
-          <tr><th>공기측</th><td>열전달 상관식 <b>13종</b>(평판핀 8 · 루버핀 5) · 압력강하 11종 ·
-            건표면 / 습표면(응축수) · 팬 비균일 풍량 · 접촉 열저항</td></tr>
+          <tr><th>작동유체</th><td><b>70종</b> — 물 · 공기 · R717 · R744(CO<sub>2</sub>) · R290 · R410A ·
+            R134a · R1234yf · <b>부동액(EG · PG 수용액 12종)</b> 등 (CoolProp 물성 기반)</td></tr>
+          <tr><th>공기측</th><td>열전달 상관식 <b>13종</b>(평판핀 8 · 루버핀 5) · 압력강하 11종(평판핀 6 · 루버핀 5) ·
+            건표면/습표면(응축수) · 팬 비균일 풍량 · 접촉 열저항</td></tr>
           <tr><th>관내측</th><td>단상 열전달·마찰, 2상 응축·증발 열전달 및 압력강하 상관식 선택</td></tr>
-          <tr><th>회로</th><td>드래그 편집 · 분지 / 합지 · 회로별 튜브수 불균등 허용 ·
+          <tr><th>회로</th><td>드래그 편집 · 분지/합지 · 회로별 튜브 수 불균등 허용 ·
             미연결 튜브 자동 처리 · 유량 분배(ΔP 균일화 또는 균등)</td></tr>
           <tr><th>결과</th><td>용량 Q · 압력강하 ΔP · 응축수 · 공기/냉매 입출구 상태 ·
-            습공기선도 · P-h 선도 · 면별/열별 분포 컬러맵</td></tr>
-          <tr><th>파일</th><td>엑셀 설계템플릿 불러오기 / 결과 내보내기 — 불러오면 결과까지 복원</td></tr>
+            습공기선도 · P-h 선도 · 면/열별 분포 컬러맵</td></tr>
+          <tr><th>파일</th><td>엑셀 설계 템플릿 입출력 · 결과 내보내기 — <b>결과 파일</b>을 불러오면 계산 없이 결과 복원</td></tr>
           <tr><th>실행환경</th><td>웹 브라우저(무설치) · 모바일 전용 화면 · 라이트/다크 · 한국어/English</td></tr>
-          <tr><th>Sizing</th><td>목표 부하로부터 형상 후보 산출<span class="tag">개발 중</span></td></tr>
+          <tr><th>Sizing</th><td>목표 부하로부터 형상 후보 산출<span class="tag">개발 예정</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -417,7 +419,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <h2>자체 실험 124 케이스로 대조했습니다</h2>
       <p class="sub">계산값을 실험값과 맞춰본 범위를 그대로 공개합니다.</p>
       <ul class="vlist">
-        <li><span class="vn">42</span><span class="vt"><b>물</b>평판핀 / 루버핀 · 3~20열</span></li>
+        <li><span class="vn">42</span><span class="vt"><b>물</b>평판핀/루버핀 · 3열</span></li>
         <li><span class="vn">39</span><span class="vt"><b>R134a</b>응축·증발 2상 조건 포함</span></li>
         <li><span class="vn">27</span><span class="vt"><b>R410A</b>고압 냉매 조건</span></li>
         <li><span class="vn">16</span><span class="vt"><b>R1234yf</b>저GWP 냉매</span></li>
@@ -429,7 +431,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       </div>
       <div class="cardbox">
         <h3>실험 기간</h3>
-        <p>2023–2026년 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다.</p>
+        <p>2023~2024년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다. 2026년 R410A 10열 5케이스는 정리 중이라 124케이스 집계에서 제외했습니다.</p>
       </div>
     </div>
   </section>
@@ -440,8 +442,8 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="kicker">For</p>
       <h2>이런 분께 도움이 됩니다</h2>
       <div class="cardbox"><h3>열교환기 설계·해석 담당</h3><p>보유 형상의 성능을 먼저 예측해 보고, 회로 배열 대안을 비교해 설계를 좁힙니다.</p></div>
-      <div class="cardbox"><h3>히트펌프·공조기기 개발</h3><p>냉매·운전조건을 바꿔가며 코일 성능이 어떻게 변하는지 빠르게 확인합니다.</p></div>
-      <div class="cardbox"><h3>시험평가·성능검증</h3><p>보유 시험데이터와 계산값을 비교해 시험 결과를 해석하는 근거로 씁니다.</p></div>
+      <div class="cardbox"><h3>히트펌프·공조기기 개발</h3><p>냉매·운전 조건을 바꿔가며 코일 성능이 어떻게 변하는지 빠르게 확인합니다.</p></div>
+      <div class="cardbox"><h3>시험평가·성능검증</h3><p>보유 시험 데이터와 계산값을 비교해 시험 결과를 해석하는 근거로 씁니다.</p></div>
       <div class="cardbox"><h3>대학 연구실·교육</h3><p>회로 구성이 성능에 미치는 영향을 화면에서 직접 보여주는 교육 도구로 활용합니다.</p></div>
     </div>
   </section>
@@ -450,16 +452,15 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
   <section id="contact" class="contact">
     <div class="wrap">
       <p class="kicker" style="color:#fff;opacity:.85">Contact</p>
-      <h2>접속주소·계정 발급 문의</h2>
-      <p class="sub">소속 · 담당 업무 · 사용 목적을 적어 보내주시면 계정을 발급해 드립니다.
-         발급 즉시 브라우저로 접속하실 수 있고, 설치 절차는 없습니다.</p>
-      <a class="addr" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EA%B3%84%EC%A0%95%20%EB%B0%9C%EA%B8%89%20%EB%AC%B8%EC%9D%98">jwyoo@kimm.re.kr</a>
+      <h2>문의 · 협력 제안</h2>
+      <p class="sub">소속 · 담당 업무 · 사용 목적을 적어 보내주세요.</p>
+      <a class="addr" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">jwyoo@kimm.re.kr</a>
       <ul class="ask">
         <li>소속 기관 · 부서</li>
         <li>담당 업무</li>
         <li>사용 목적 (설계 검토 / 연구 / 교육 등)</li>
       </ul>
-      <a class="btn btn-onblue" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EA%B3%84%EC%A0%95%20%EB%B0%9C%EA%B8%89%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
+      <a class="btn btn-onblue" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
     </div>
   </section>
 </main>
@@ -472,7 +473,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
     <div class="org">히트펌프연구센터<br>대전광역시 유성구 가정북로 156<br>
       <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a></div>
     <div class="legal">
-      <p><strong>연구 결과 발표 시 인용</strong><br>KIMM-HEX Coil, 한국기계연구원 히트펌프연구센터 (2026)</p>
+      <p><strong>연구 결과 발표 시 인용</strong><br><img src="assets/wordmark-kimm-hex-coil-white.svg" alt="KIMM-HEX Coil" style="height:1.05em;width:auto;display:inline-block;vertical-align:-.12em">, 한국기계연구원 히트펌프연구센터 (2026)</p>
       <p>Copyright © 2026 한국기계연구원(KIMM) 히트펌프연구센터. All rights reserved.</p>
       <p><strong>면책</strong> — 본 프로그램은 설계 검토를 돕는 <strong>참고 도구</strong>로,
          계산 결과를 보증하지 않으며 실제 설비 결정에는 별도 검증이 필요합니다.</p>
