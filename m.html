@@ -10,7 +10,14 @@
 <meta property="og:title" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램">
 <meta property="og:description" content="설계는 자유롭게, 결과는 직관적으로. 한국기계연구원 히트펌프연구센터.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/hero.webp">
+<meta property="og:url" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/m.html">
+<!--  공유 썸네일(2026-09-06): 정사각 카드(og-mobile.png). 생성·설명은 index.html 과 같다. -->
+<meta property="og:image" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/assets/og-mobile.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램: 냉매 회로 편집 · 격자 단위 성능 예측 · 팬 풍량 비균일 · 면/열별 컬러맵">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/assets/og-mobile.png">
 <!--  검색엔진에는 데스크톱 판이 정본임을 알린다(모바일 별도 URL 의 표준 처리). -->
 <link rel="canonical" href="https://jinwooyoo86.github.io/kimm-hex-coil-site/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='13' fill='%231B3281'/><g transform='translate(8,10)'><g stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' opacity='.58'><path d='M12 5V39M18 5V39M24 5V39M30 5V39M36 5V39'/></g><path d='M38 13H10A4.5 4.5 0 0 0 10 22H38A4.5 4.5 0 0 1 38 31H10' fill='none' stroke='%23FFFFFF' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/></g></svg>">
@@ -69,8 +76,8 @@ a{color:var(--kimm-blue); text-decoration:none}
   display:inline-block; font-size:11.5px; font-weight:700; color:var(--kimm-blue);
   background:#fff; border:1px solid var(--blue-200); padding:5px 11px; border-radius:999px;
 }
-.wmrow{display:flex; align-items:center; gap:11px; margin:16px 0 0}
-.wmrow .mk{height:32px; width:auto; flex:0 0 auto}
+/*  2026-09-06: 제품명 왼쪽 핀튜브 아이콘(.mk)과 "…히트펌프연구센터 개발" 줄(.note) 제거(사용자 요청) — 워드마크가 왼쪽에서 시작 */
+.wmrow{display:flex; align-items:center; justify-content:flex-start; margin:16px 0 0}
 .wmrow .wm{height:26px; width:auto; flex:0 1 auto}
 .tagline{margin:14px 0 0; font-size:22px; line-height:1.3; font-weight:800;
   letter-spacing:-.03em; color:var(--gray-900)}
@@ -86,7 +93,6 @@ a{color:var(--kimm-blue); text-decoration:none}
 }
 .btn-primary{background:var(--kimm-blue); color:#fff}
 .btn-ghost{background:#fff; color:var(--kimm-blue); border-color:var(--blue-200)}
-.note{margin:12px 0 0; font-size:12.5px; color:var(--gray-500); line-height:1.6}
 
 /* ── 지표 ───────────────────────────────────────────── */
 .stats{background:var(--kimm-blue); color:#fff; padding:20px 12px}
@@ -213,7 +219,6 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
     <div class="wrap">
       <span class="eyebrow">핀튜브 열교환기 설계·성능예측 프로그램</span>
       <div class="wmrow">
-        <img class="mk" src="assets/icon-fintube.svg" alt="">
         <img class="wm" src="assets/wordmark-kimm-hex-coil.svg" alt="KIMM-HEX Coil">
       </div>
       <p class="tagline">설계는 자유롭게,<br>결과는 직관적으로.</p>
@@ -222,7 +227,6 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
          계산합니다. 설치 절차 없이 웹 브라우저에서 바로 씁니다.</p>
       <a class="btn btn-primary" href="#contact">문의 · 협력 제안</a>
       <a class="btn btn-ghost" href="#features">기능 살펴보기</a>
-      <p class="note">한국기계연구원 히트펌프연구센터 개발</p>
     </div>
   </div>
 
@@ -247,8 +251,8 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <div class="step"><div class="num">2</div><h3>냉매 회로</h3><p>배관 드래그<br>분지·합지</p></div>
         <div class="step"><div class="num">3</div><h3>유체 조건</h3><p>공기 입구 상태<br>작동유체 70종</p></div>
         <div class="step"><div class="num">4</div><h3>풍량 분포</h3><p>팬 비균일<br>2D·3D 프리뷰</p></div>
-        <div class="step"><div class="num">5</div><h3>결과 ①</h3><p>성능 요약<br>용량·압력강하</p></div>
-        <div class="step"><div class="num">6</div><h3>결과 ②</h3><p>면/열별 분포<br>컬러맵</p></div>
+        <div class="step"><div class="num">5</div><h3>결과 (성능)</h3><p>성능 요약<br>용량·압력강하</p></div>
+        <div class="step"><div class="num">6</div><h3>결과 (맵)</h3><p>면/열별 분포<br>컬러맵</p></div>
       </div>
     </div>
   </section>
@@ -294,7 +298,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <figure class="shot tall">
           <img src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
                alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
-          <figcaption>② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-벤드 실선/점선 구분</figcaption>
+          <figcaption>② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
         </figure>
       </div>
 
@@ -318,8 +322,8 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <span class="idx">4</span>
         <h3>풍량 분포 — 팬 비균일 반영</h3>
         <ul>
-          <li>중앙은 강하고 가장자리는 약한 팬 토출 분포를 <b>가우시안·링 모델</b>로 모사합니다.</li>
-          <li>입구면 셀별로 공기 조건을 차등 적용합니다.</li>
+          <li>중앙은 강하고 가장자리는 약한 팬 토출 분포를 <b>가우시안 모델</b>(σ·floor·β)로 모사합니다.</li>
+          <li>입구면 셀별로 공기 유량을 차등 적용합니다.</li>
           <li>2D·3D 프리뷰로 분포를 확인한 뒤 계산에 넣습니다.</li>
         </ul>
         <figure class="shot">
@@ -344,22 +348,22 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
         <figure class="shot">
           <img src="assets/result1.webp" width="1400" height="1166" loading="lazy"
                alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
-          <figcaption>⑤ 결과 ① — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
+          <figcaption>⑤ 결과 (성능) — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
         </figure>
       </div>
 
       <div class="feat">
         <span class="idx">6</span>
-        <h3>결과 ② — 면/열별 컬러맵</h3>
+        <h3>결과 (맵) — 면/열별 컬러맵</h3>
         <ul>
-          <li>공기 입구면에서 출구면까지, 냉매 열별 분포를 표시합니다.</li>
-          <li>온도·유량·상태량을 색으로 구분해 <b>분포 차이가 큰 구간을 시각적으로 비교</b>합니다.</li>
+          <li>공기 입구면에서 출구면까지, 냉매 튜브열별 분포를 표시합니다.</li>
+          <li>온도·습도·면속도·압력·유량·상태를 색으로 구분해 <b>분포 차이가 큰 구간을 시각적으로 비교</b>합니다.</li>
           <li>면/열별을 골라 보고, 상세 분포는 컨투어로 다시 그립니다.</li>
         </ul>
         <figure class="shot">
           <img src="assets/result2.webp" width="1400" height="1421" loading="lazy"
                alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
-          <figcaption>⑥ 결과 ② — 면/열별 분포 컬러맵</figcaption>
+          <figcaption>⑥ 결과 (맵) — 면/열별 분포 컬러맵</figcaption>
         </figure>
       </div>
     </div>
