@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램 | 한국기계연구원</title>
-<meta name="description" content="형상·냉매 회로·운전 조건을 입력하면 용량·압력강하·제습량을 산출합니다. 작동유체 70종(부동액 포함), 공기측 열전달 상관식 13종, 자체 실험 124케이스 검증. 한국기계연구원 히트펌프연구센터.">
+<meta name="description" content="형상·냉매 회로·운전 조건을 입력하면 용량·압력강하·제습량을 산출합니다. 작동유체 70종(부동액 포함), 공기측 열전달 상관식 13종, 자체 실험 124케이스 검증, 설치 없이 웹 브라우저에서 사용. 한국기계연구원 히트펌프연구센터.">
 <meta name="author" content="한국기계연구원 히트펌프연구센터">
 <meta name="theme-color" content="#1B3281">
 <meta property="og:title" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램">
@@ -177,12 +177,23 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
   var(--blue-700) 100%); color:#fff; border:none}
 .contact h2{color:#fff}
 .contact .sub{color:var(--blue-100)}
-.contact .addr{display:block; margin:16px 0 4px; font-size:19px; font-weight:800; color:#fff;
+/* 2026-09-08: 담당자 2인 — 이름(.who) 위, 이메일(.addr) 아래 */
+.contact .who{display:block; margin-top:14px; font-size:13px; font-weight:600; color:var(--blue-100)}
+.contact .addr{display:block; margin:2px 0 0; font-size:19px; font-weight:800; color:#fff;
   word-break:break-all}
+.contact .ask{margin-top:14px}
 .ask{margin:10px 0 0; padding:0; list-style:none; font-size:14px; color:var(--blue-100)}
 .ask li{padding-left:14px; position:relative; margin-bottom:5px; line-height:1.6}
 .ask li::before{content:"·"; position:absolute; left:4px; color:#fff; font-weight:800}
 .contact .btn-onblue{background:#fff; color:var(--kimm-blue); margin-top:16px}
+/* 2026-09-15: 데스크톱 판과 문구 일치 — 체험판 안내 문단 + '함께 할 수 있는 일' 4카드 */
+.contact .trial{margin:16px 0 0; font-size:12.5px; line-height:1.7; color:rgba(255,255,255,.72)}
+.contact .trial strong{color:#fff}
+.contact .with{margin:28px 0 0; font-size:17px; font-weight:700; color:#fff; letter-spacing:-.02em}
+.contact .with + .cardbox{margin-top:12px}
+.contact .cardbox{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.18); box-shadow:none}
+.contact .cardbox h3{color:#fff}
+.contact .cardbox p{color:var(--blue-100)}
 
 /* 푸터 */
 .ftr{background:var(--gray-900); color:var(--gray-400); padding:26px 0 32px; font-size:12.5px}
@@ -224,7 +235,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="tagline">설계는 자유롭게,<br>결과는 직관적으로.</p>
       <p class="deffn">형상·냉매 회로·운전 조건 입력<span class="ar">→</span>용량 · 압력강하 · 제습량 산출</p>
       <p class="lede"><b>형상과 회로를 직접 구성</b>하고, 유효성 검사를 통과한 회로로
-         계산합니다. 설치 절차 없이 웹 브라우저에서 바로 씁니다.</p>
+         계산합니다. 설치 절차 없이 웹 브라우저에서 바로 사용합니다.</p>
       <a class="btn btn-primary" href="#contact">문의 · 협력 제안</a>
       <a class="btn btn-ghost" href="#features">기능 살펴보기</a>
     </div>
@@ -262,7 +273,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
     <div class="wrap">
       <p class="kicker">Features</p>
       <h2>설계는 자유롭게,<br>결과는 직관적으로.</h2>
-      <p class="sub">정해진 회로 템플릿에 형상을 맞추는 대신, 원하는 회로를 그려놓고 그 결과를 봅니다.</p>
+      <p class="sub">형상과 회로를 직접 구성하고, 구성한 조건으로 성능을 계산합니다.</p>
 
       <!--  2026-09-03: 스텝 1~6 화면을 **모두** 싣는다(사용자 요청).
             종전에는 ②회로 · ⑤성능요약 · ④풍량 · ⑥분포맵 네 장뿐이고
@@ -375,7 +386,9 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="kicker">Mobile</p>
       <h2>휴대폰에서도 설계 전체를</h2>
       <p class="sub">휴대폰 전용 화면에서 <b>형상 · 회로 · 유체 · 상관식 · 풍량</b>을 모두 편집하고
-         <b>성능 요약과 면/열별 분포</b>까지 봅니다. <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.</p>
+         <b>성능 요약과 면/열별 분포</b>까지 확인합니다. 예제 케이스를 고르면 한 번에 채워집니다.
+         <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.
+         홈 화면에 추가하면 주소창 없이 앱처럼 열립니다.</p>
       <div class="chips">
         <span class="chip">형상·회로 편집</span>
         <span class="chip">탭으로 회로 연결</span>
@@ -385,7 +398,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       </div>
       <figure class="shot" style="max-width:280px;margin:16px auto 0">
         <img src="assets/mobile.webp" width="700" height="1137" loading="lazy"
-             alt="모바일 화면 — 최근 계산 KPI 카드와 케이스 요약">
+             alt="모바일 화면 — 최근 계산 KPI 카드와 케이스 요약이 세로로 배치되어 있다.">
         <figcaption>모바일 화면</figcaption>
       </figure>
     </div>
@@ -399,17 +412,21 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="sub">v1.0 기준입니다.</p>
       <table class="spec">
         <tbody>
-          <tr><th>작동유체</th><td><b>70종</b> — 물 · 공기 · R717 · R744(CO<sub>2</sub>) · R290 · R410A ·
-            R134a · R1234yf · <b>부동액(EG · PG 수용액 12종)</b> 등 (CoolProp 물성 기반)</td></tr>
-          <tr><th>공기측</th><td>열전달 상관식 <b>13종</b>(평판핀 8 · 루버핀 5) · 압력강하 11종(평판핀 6 · 루버핀 5) ·
-            건표면/습표면(응축수) · 팬 비균일 풍량 · 접촉 열저항</td></tr>
+          <tr><th>작동유체</th><td><b>70종</b> — 물 · 공기 · R717(암모니아) · R744(CO<sub>2</sub>) · R290 · R410A ·
+            R134a · R1234yf · <b>부동액(EG · PG 수용액 12종)</b> 등
+            <br><span style="font-size:13px; color:var(--gray-500)">CoolProp 물성 기반</span></td></tr>
+          <tr><th>공기측</th><td>열전달 상관식 <b>13종</b>(평판핀 8 · 루버핀 5) · 압력강하 상관식 11종(평판핀 6 · 루버핀 5) — 선택 계산
+            <br>건표면 / 습표면(응축수 산출) · 팬 비균일 풍량 분포 · 접촉 열저항 반영</td></tr>
           <tr><th>관내측</th><td>단상 열전달·마찰, 2상 응축·증발 열전달 및 압력강하 상관식 선택</td></tr>
-          <tr><th>회로</th><td>드래그 편집 · 분지/합지 · 회로별 튜브 수 불균등 허용 ·
-            미연결 튜브 자동 처리 · 유량 분배(ΔP 균일화 또는 균등)</td></tr>
+          <tr><th>회로</th><td>드래그 편집 · 분지(split)/합지(merge) · 회로별 튜브 수 불균등 허용
+            <br>미연결 튜브는 독립 1튜브 회로로 자동 처리
+            <br>유량 분배: ΔP 균일화(반복 자기분배) 또는 균등 분배</td></tr>
+          <tr><th>냉매 입구 지정</th><td>단상 유체: 입구 P · T · 유량 직접 지정<br>냉매: 직접(P · T/건도) · 증발기(응축기 출구 기준, 입구압 지정) · 증발기(입구 엔탈피 · 출구압 지정)</td></tr>
           <tr><th>결과</th><td>용량 Q · 압력강하 ΔP · 응축수 · 공기/냉매 입출구 상태 ·
             습공기선도 · P-h 선도 · 면/열별 분포 컬러맵</td></tr>
-          <tr><th>파일</th><td>엑셀 설계 템플릿 입출력 · 결과 내보내기 — <b>결과 파일</b>을 불러오면 계산 없이 결과 복원</td></tr>
-          <tr><th>실행환경</th><td>웹 브라우저(무설치) · 모바일 전용 화면 · 라이트/다크 · 한국어/English</td></tr>
+          <tr><th>파일</th><td>엑셀 설계 템플릿 입출력 · 결과 내보내기(형상·회로도·조건·셀별 원자료)
+            <br><b>결과 파일</b>을 불러오면 계산 없이 결과 복원</td></tr>
+          <tr><th>실행환경</th><td>웹 브라우저(무설치) · 모바일 전용 화면 · 라이트/다크 화면 전환 · 한국어/English</td></tr>
           <tr><th>Sizing</th><td>목표 부하로부터 형상 후보 산출<span class="tag">개발 예정</span></td></tr>
         </tbody>
       </table>
@@ -435,7 +452,7 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       </div>
       <div class="cardbox">
         <h3>실험 기간</h3>
-        <p>2023~2024년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다. 2026년 R410A 10열 5케이스는 정리 중이라 124케이스 집계에서 제외했습니다.</p>
+        <p>2023~2024년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다.</p>
       </div>
     </div>
   </section>
@@ -458,13 +475,26 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <p class="kicker" style="color:#fff;opacity:.85">Contact</p>
       <h2>문의 · 협력 제안</h2>
       <p class="sub">소속 · 담당 업무 · 사용 목적을 적어 보내주세요.</p>
+      <div class="who">류진우 책임연구원</div>
       <a class="addr" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">jwyoo@kimm.re.kr</a>
+      <div class="who">송찬호 책임연구원</div>
+      <a class="addr" href="mailto:sch@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">sch@kimm.re.kr</a>
       <ul class="ask">
         <li>소속 기관 · 부서</li>
         <li>담당 업무</li>
         <li>사용 목적 (설계 검토 / 연구 / 교육 등)</li>
       </ul>
-      <a class="btn btn-onblue" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
+      <a class="btn btn-onblue" href="mailto:jwyoo@kimm.re.kr,sch@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
+      <p class="trial">
+        현재 제공되는 판은 <strong>평가·교육용 체험판</strong>입니다 —
+        기능 확인·연구·교육 목적으로, 계산 횟수와 유효기간이 제한된 접속코드로 제공됩니다.
+        제품 설계·수주 등 영리 목적 사용은 별도 이용 계약이 필요합니다.
+      </p>
+      <h3 class="with">함께 할 수 있는 일</h3>
+      <div class="cardbox"><h3>성능 예측 검토</h3><p>보유 열교환기 형상의 성능을 예측하고 결과를 함께 해석합니다.</p></div>
+      <div class="cardbox"><h3>설계 개선</h3><p>회로 배열 대안을 비교해 개선 방향을 찾습니다.</p></div>
+      <div class="cardbox"><h3>시험 데이터 비교</h3><p>기업 보유 시험 데이터와의 비교·해석을 지원합니다.</p></div>
+      <div class="cardbox"><h3>공동연구 · 기술이전</h3><p>기능 확장과 협력 방안을 협의합니다.</p></div>
     </div>
   </section>
 </main>
@@ -475,18 +505,21 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
       <span style="font-size:12px;font-weight:600;color:var(--gray-400)"> v1.0</span></div>
     <img class="ftr-logo" src="assets/kimm-logo-kr-white.svg" alt="한국기계연구원">
     <div class="org">히트펌프연구센터<br>대전광역시 유성구 가정북로 156<br>
-      <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a></div>
+      류진우 책임연구원 <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a><br>
+      송찬호 책임연구원 <a href="mailto:sch@kimm.re.kr">sch@kimm.re.kr</a></div>
     <div class="legal">
       <p><strong>연구 결과 발표 시 인용</strong><br><img src="assets/wordmark-kimm-hex-coil-white.svg" alt="KIMM-HEX Coil" style="height:1.05em;width:auto;display:inline-block;vertical-align:-.12em">, 한국기계연구원 히트펌프연구센터 (2026)</p>
       <p>Copyright © 2026 한국기계연구원(KIMM) 히트펌프연구센터. All rights reserved.</p>
       <p><strong>이용 조건</strong> — 현재 제공되는 판은 <strong>평가·교육용 체험판</strong>으로,
-         기능 확인·연구·교육 목적에 한해 한시적으로 이용이 허락됩니다. 제품 설계·수주 등
-         영리 목적 사용에는 별도의 이용 계약이 필요합니다.</p>
+         기능 확인·연구·교육 목적에 한해 한시적으로 이용이 허락됩니다. 대가 없이 제공하더라도
+         무상 이용권을 항구적으로 부여하는 것이 아니며, 제품 설계·수주 등 영리 목적 사용에는
+         별도의 이용 계약이 필요합니다.</p>
       <p><strong>면책</strong> — 본 프로그램은 설계 검토를 돕는 <strong>참고 도구</strong>로,
          계산 결과를 보증하지 않으며 실제 설비 결정에는 별도 검증이 필요합니다.</p>
-      <p><strong>오픈소스 고지</strong> — Flask · CoolProp · NumPy · pandas · openpyxl ·
-         matplotlib · Pillow · qrcode 등을 포함하며 각 구성요소는 BSD-3-Clause · MIT ·
-         Apache-2.0 · HPND 등 자체 라이선스를 따릅니다.</p>
+      <p><strong>오픈소스 고지</strong> — 본 프로그램은 Flask · CoolProp · NumPy · pandas ·
+         openpyxl · matplotlib · Pillow · qrcode 등의 오픈소스를 포함하며,
+         각 구성요소는 BSD-3-Clause · MIT · Apache-2.0 · HPND 등 자체 라이선스를 따릅니다.
+         전수 목록과 라이선스 원문은 프로그램 내 고지 화면에서 확인하실 수 있습니다.</p>
       <p style="color:var(--gray-500)">이 소개 페이지는 제3자 스크립트·추적 도구·웹폰트를 사용하지 않습니다.</p>
     </div>
     <!--  데스크톱 판으로 — ?desktop=1 이 자동 전환을 끈다(index.html 의 스크립트가 기억). -->

@@ -299,8 +299,11 @@ h2{
   border-radius:var(--radius-lg); padding:30px;
 }
 .mailbox .lbl{font-size:13.5px; font-weight:700; color:var(--blue-100); letter-spacing:.03em}
+/* 2026-09-08: 담당자 2인 — 이름(.who) 위, 이메일(.addr) 아래 두 묶음 */
+.mailbox .who{margin-top:12px; font-size:14px; font-weight:600; color:var(--blue-100); letter-spacing:.01em}
+.mailbox .ask{margin-top:22px}
 .mailbox .addr{
-  display:block; margin:8px 0 22px; font-size:clamp(20px,3vw,26px); font-weight:800;
+  display:block; margin:2px 0 0; font-size:clamp(20px,3vw,26px); font-weight:800;
   color:#fff; letter-spacing:-.02em; word-break:break-all;
 }
 .mailbox .addr:hover{color:#fff; text-decoration:underline}
@@ -398,7 +401,6 @@ h2{
       <p class="deffn">형상·냉매 회로·운전 조건 입력<span class="ar">→</span>용량 · 압력강하 · 제습량 산출</p>
       <p class="lede">
         <b>형상과 회로를 직접 구성</b>하고, 유효성 검사를 통과한 회로로 계산합니다.
-        용량·압력강하·제습량과 면/열별 분포를 <b>결과 (성능)·(맵)</b> 화면에서 확인하며,
         설치 절차 없이 웹 브라우저에서 바로 사용합니다.
       </p>
       <div class="cta-row">
@@ -577,7 +579,7 @@ h2{
           <p style="margin:16px 0 0; font-size:17.5px; color:var(--gray-600)">
             휴대폰 전용 화면에서 <b>형상 · 회로 · 유체 · 상관식 · 풍량</b>을 모두 편집하고
             <b>성능 요약과 면/열별 분포</b>까지 확인합니다. 예제 케이스를 고르면 한 번에 채워집니다.
-            <b>데스크톱과 같은 계산 엔진 · 같은 페이로드</b>라 결과가 다르지 않습니다.
+            <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.
             홈 화면에 추가하면 주소창 없이 앱처럼 열립니다.
           </p>
           <div class="chips" style="margin-top:22px">
@@ -617,7 +619,7 @@ h2{
               열전달 상관식 <b>13종</b>(평판핀 8 · 루버핀 5) · 압력강하 상관식 11종(평판핀 6 · 루버핀 5) — 선택 계산
               <br>건표면 / 습표면(응축수 산출) · 팬 비균일 풍량 분포 · 접촉 열저항 반영
             </td></tr>
-            <tr><th>관내측</th><td>단상 열전달·마찰 상관식, 2상 응축·증발 열전달 및 압력강하 상관식 선택</td></tr>
+            <tr><th>관내측</th><td>단상 열전달·마찰, 2상 응축·증발 열전달 및 압력강하 상관식 선택</td></tr>
             <tr><th>회로</th><td>
               드래그 편집 · 분지(split)/합지(merge) · 회로별 튜브 수 불균등 허용
               <br>미연결 튜브는 독립 1튜브 회로로 자동 처리
@@ -662,7 +664,7 @@ h2{
           </div>
           <div class="card">
             <h3>실험 기간</h3>
-            <p>2023~2024년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다. 2026년 R410A 10열 5케이스는 정리 중이라 124케이스 집계에서 제외했습니다.</p>
+            <p>2023~2024년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다.</p>
           </div>
         </div>
       </div>
@@ -696,7 +698,10 @@ h2{
       <div class="contact-grid">
         <div class="mailbox">
           <div class="lbl">문의 · 협력 제안</div>
+          <div class="who">류진우 책임연구원</div>
           <a class="addr" href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">jwyoo@kimm.re.kr</a>
+          <div class="who">송찬호 책임연구원</div>
+          <a class="addr" href="mailto:sch@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">sch@kimm.re.kr</a>
           <ul class="ask">
             <li>소속 기관 · 부서</li>
             <li>담당 업무</li>
@@ -704,7 +709,7 @@ h2{
           </ul>
           <div class="cta-row">
             <a class="btn btn-onblue"
-               href="mailto:jwyoo@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
+               href="mailto:jwyoo@kimm.re.kr,sch@kimm.re.kr?subject=%5BKIMM-HEX%20Coil%5D%20%EB%AC%B8%EC%9D%98">메일 보내기</a>
           </div>
           <p style="margin:18px 0 0;font-size:13px;line-height:1.7;color:rgba(255,255,255,.72)">
             현재 제공되는 판은 <strong style="color:#fff">평가·교육용 체험판</strong>입니다 —
@@ -740,7 +745,8 @@ h2{
         <div class="org">
           히트펌프연구센터<br>
           대전광역시 유성구 가정북로 156<br>
-          <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a>
+          류진우 책임연구원 <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a><br>
+          송찬호 책임연구원 <a href="mailto:sch@kimm.re.kr">sch@kimm.re.kr</a>
         </div>
       </div>
       <div class="org" style="max-width:420px">
