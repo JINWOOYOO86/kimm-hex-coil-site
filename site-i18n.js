@@ -231,6 +231,10 @@
       btn.setAttribute('aria-label', en ? 'Switch to Korean' : 'Switch to English');
     }
     try { localStorage.setItem('hx-site-lang', lang); } catch (e) {}
+    /*  프로그램(hexcoil.kr) 링크에 ?lang= 을 붙인다(2026-09-23) — 다른 도메인이라 저장값을 나눠 쓸 수 없다.
+        시작 페이지가 이 값을 받아 같은 언어로 열고, 들어간 뒤 메인 프로그램도 그 언어로 연다. */
+    var apps = document.querySelectorAll('a[href^="https://hexcoil.kr"]');
+    for (var a = 0; a < apps.length; a++) apps[a].setAttribute('href', 'https://hexcoil.kr/?lang=' + lang);
   }
 
   /*  전환 버튼은 CSS 에서 감춰 두고 여기서 꺼낸다 — 이 파일이 못 뜨면
@@ -239,6 +243,9 @@
 
   var saved = null;
   try { saved = localStorage.getItem('hx-site-lang'); } catch (e) {}
+  /*  ?lang=en|ko 가 붙어 오면 그쪽이 이긴다(2026-09-23) — 프로그램 시작 페이지의 [프로그램 소개 페이지]가 넘겨 준다 */
+  var qm = /[?&]lang=(en|ko)\b/.exec(location.search);
+  if (qm) saved = qm[1];
   var navLang = (navigator.language || navigator.userLanguage || 'ko').toLowerCase();
   apply(saved || (navLang.indexOf('ko') === 0 ? 'ko' : 'en'));
 
