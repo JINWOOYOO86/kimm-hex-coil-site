@@ -30,7 +30,7 @@
     'hero.cta.app': 'Open the program ↗',
     'hero.cta.contact': 'Contact · collaboration',
     'hero.cta.features': 'See the features',
-    'hero.applink': '<b>hexcoil.kr</b> — runs in your browser, with nothing to install. An <b>access code</b> is required; send us your affiliation and intended use through <a href="#contact">Contact</a> and we will issue one.',
+    'hero.applink': '<b>hexcoil.kr</b> — runs in your browser, with nothing to install. Choose <b>Look around without registering</b> on the start page to see the screens and an example result first; running a calculation needs an <b>access code</b>. Enter your company, name and e-mail under [Request an access code] on the start page and we will e-mail one to you.',
 
     'stats.u.kind': '&nbsp;fluids', 'stats.u.case': '&nbsp;cases', 'stats.u.kind2': '&nbsp;models', 'stats.u.dir': '&nbsp;directions',
     'stats.fluids': 'Working fluids supported<br>natural refrigerants · air · brines included',
@@ -39,55 +39,55 @@
     'stats.grid': 'Grid-based analysis<br>local state in every cell',
 
     'flow.h': 'Design review finished in six steps',
-    'flow.p': 'Work down the order on the left of the screen and you go from geometry input to distribution maps.',
-    'step.geo.h': 'Geometry', 'step.geo.p': 'Tube and fin geometry<br>rows · tiers · pitches',
-    'step.cir.h': 'Refrigerant circuit', 'step.cir.p': 'Drag the tubing<br>split · merge',
-    'step.flu.h': 'Fluid conditions', 'step.flu.p': 'Air inlet state<br>70 working fluids',
-    'step.air.h': 'Airflow distribution', 'step.air.p': 'Fan non-uniformity<br>2D · 3D preview',
-    'step.res1.h': 'Results (performance)', 'step.res1.p': 'Performance summary<br>capacity · pressure drop',
-    'step.res2.h': 'Results (maps)', 'step.res2.p': 'Face/row distribution<br>colour maps',
+    'flow.p': 'Work down the order on the left of the screen and you go from geometry input to distribution maps. New to it? A <b>guided tutorial</b> (Korean · English) points you through each screen.',
+    'step.geo.h': 'HX Dimension', 'step.geo.p': 'Tube and fin geometry<br>rows · tiers · pitches',
+    'step.cir.h': 'Circuit', 'step.cir.p': 'Drag the tubing<br>split · merge',
+    'step.flu.h': 'Fluid', 'step.flu.p': 'Air inlet state<br>70 working fluids',
+    'step.air.h': 'Air Distribution', 'step.air.p': 'Fan non-uniformity<br>2D · 3D preview',
+    'step.res1.h': 'Result (Performance)', 'step.res1.p': 'Performance summary<br>capacity · pressure drop',
+    'step.res2.h': 'Result (Map)', 'step.res2.p': 'Face/row distribution<br>colour maps',
 
     'feat.h': 'Design freely,<br>read the results at a glance.',
     'feat.p': 'Build the geometry and the circuitry yourself, then compute performance under the conditions you set.',
 
-    'f1.h': 'Geometry — type a dimension, see it in 3D',
+    'f1.h': 'HX Dimension — type a dimension, see it in 3D',
     'f1.ul': '<li>Enter tube length, rows, tiers, pitches and outer diameter and the <b>3D model updates immediately</b>.</li>'
            + '<li>It is rendered to true scale, with L · W · H · OD and fin pitch shown as dimension lines.</li>'
            + '<li>The staggered layout and the tube cross-section (inner diameter) are drawn as well, so you can <b>check the tube arrangement by eye</b>.</li>'
            + '<li>Choose plain or louver fins and the louver dimensions (Lp · Lh) appear together with the matching correlations.</li>',
-    'f1.cap': '① Geometry — L · W · H · OD and fin pitch in 3D',
+    'f1.cap': '① HX Dimension — L · W · H · OD and fin pitch in 3D',
 
-    'f2.h': 'Refrigerant circuit — drawn by dragging',
+    'f2.h': 'Circuit — drawn by dragging',
     'f2.ul': '<li>Drag tubes to connect them and build <b>splits and merges</b> (acyclic circuits).</li>'
            + '<li>Loops and duplicate connections are checked as you draw, and tubes left unconnected become <b>independent single-tube circuits</b> automatically.</li>'
            + '<li>Flow distribution is either <b>ΔP equalisation (iterative self-distribution)</b> or an equal split.</li>',
-    'f2.cap': '② Refrigerant circuit — colour = circuit · ★ = inlet · U-bends solid/dashed',
+    'f2.cap': '② Circuit — colour = circuit · ★ = inlet · U-bends solid/dashed',
 
-    'f3.h': 'Fluid conditions — 70 working fluids',
+    'f3.h': 'Fluid — 70 working fluids',
     'f3.ul': '<li>The air inlet state is set from the dry-bulb temperature plus one of <b>wet-bulb temperature, relative humidity, humidity ratio, enthalpy or dew point</b>.</li>'
            + '<li>Pick the working fluid from <b>70</b> (water, air, R717, R744, R290, R410A, R134a, R1234yf, <b>EG/PG aqueous brines</b> and more) — properties come from CoolProp.</li>'
            + '<li>The fluid inlet is specified in one of four ways: <b>(1) pressure · temperature</b>, <b>(2) pressure · vapour quality</b>, <b>(3) pressure · enthalpy</b>, <b>(4) outlet pressure · enthalpy</b> — water uses all four just like a refrigerant, while brines use (1) only.</li>'
            + '<li>Single-phase and two-phase heat transfer and pressure drop correlations are chosen separately.</li>',
-    'f3.cap': '③ Fluid conditions — five ways to set the air inlet · 70 working fluids',
+    'f3.cap': '③ Fluid — five ways to set the air inlet · 70 working fluids',
 
-    'f4.h': 'Airflow distribution — fan non-uniformity included',
-    'f4.ul': '<li>The fan discharge profile — strong at the centre, weak at the edges — is reproduced with a <b>Gaussian model</b> (σ · floor · β).</li>'
+    'f4.h': 'Air Distribution — fan non-uniformity included',
+    'f4.ul': '<li>The fan discharge profile — strong at the centre, weak at the edges — is reproduced with a <b>Gaussian model</b> (σ · floor · β), and the centre shift ratio C moves the peak up or down.</li>'
            + '<li>Air flow is applied cell by cell across the inlet face.</li>'
            + '<li>Check the profile in the 2D/3D preview before it goes into the calculation.</li>',
-    'f4.cap': '④ Airflow distribution — 3D face velocity at the coil inlet · non-uniformity tuned with fan σ · floor · β',
+    'f4.cap': '④ Air Distribution — 3D face velocity at the coil inlet · non-uniformity tuned with fan σ · floor · β · C',
 
     'f5.h': 'Performance summary — prediction cell by cell',
     'f5.ul': '<li>The coil is <b>divided into a grid in three directions</b> (height, depth and length) and solved cell by cell.</li>'
            + '<li>Local heat transfer and pressure drop are computed for each cell.</li>'
            + '<li>Under wet-surface conditions the <b>condensate (dehumidification) rate</b> is obtained.</li>'
            + '<li>Results are presented together with a psychrometric chart, a P–h diagram and the flow split per circuit.</li>',
-    'f5.cap': '⑤ Results (performance) — summary · capacity · pressure drop · condensate',
+    'f5.cap': '⑤ Result (Performance) — summary · capacity · pressure drop · condensate',
 
-    'f6.h': 'Results (maps) — colour maps by face and row',
+    'f6.h': 'Result (Map) — colour maps by face and row',
     'f6.ul': '<li>Distributions are shown from the air inlet face through to the outlet face, row by row along the refrigerant tubes.</li>'
            + '<li>Temperature, humidity, face velocity, pressure, flow rate and phase are colour-coded so you can <b>see at a glance where the distribution differs most</b>.</li>'
            + '<li>Choose a face or a row, and redraw the detail as a contour plot.</li>',
-    'f6.cap': '⑥ Results (maps) — distribution colour maps by face and row',
+    'f6.cap': '⑥ Result (Map) — distribution colour maps by face and row',
 
     'mob.h': 'The whole design on a phone',
     'mob.p': 'The phone screen edits <b>geometry, circuitry, fluids, correlations and airflow</b> and shows the <b>performance summary and the face/row distributions</b>. Pick an example case and everything is filled in at once. It runs <b>the same calculation engine as the desktop</b>, so the results do not differ. Add it to your home screen and it opens like an app, without an address bar.',
@@ -144,8 +144,8 @@
     'ct.who2': 'Chanho Song, Principal Researcher',
     'ct.ask': '<li>Institution · department</li><li>Your role</li><li>Intended use (design review / research / teaching)</li>',
     'ct.mail': 'Send an e-mail',
-    'ct.app': 'Program address <a href="https://hexcoil.kr" target="_blank" rel="noopener">hexcoil.kr</a> — an <b>access code</b> is required to sign in. Send us a message above and we will issue one.',
-    'ct.trial': 'The edition offered today is an <strong style="color:#fff">evaluation and educational trial</strong> — for feature review, research and teaching, provided through an access code with a limited number of calculations and a limited validity period. Commercial use such as product design or bidding requires a separate licence agreement.',
+    'ct.app': 'Program address <a href="https://hexcoil.kr" target="_blank" rel="noopener">hexcoil.kr</a> — take a look straight away with <b>Look around without registering</b>. The <b>access code</b> needed for calculations can be requested on the start page under [Request an access code].',
+    'ct.trial': 'Access codes are issued for feature review, research and teaching, with a set number of calculations and a validity period. Commercial use such as product design or bidding requires a separate licence agreement.',
     'ct.work.h': 'What we can do together',
     'ct.w.pred.h': 'Performance prediction review',
     'ct.w.pred.p': 'We predict the performance of your heat exchanger geometry and interpret the results with you.',

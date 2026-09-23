@@ -55,7 +55,7 @@ capture_ui.py → build_assets.py → 홍보자료/assets/*.png → build_site_a
 
 - 색·타이포는 `index.html` 상단 `:root` 토큰 (KIMM Design System 값)
 - 문구 출처: `홍보자료/KIMM-HEX-Coil_리플릿_A4양면.html`, `KIMM-HEX-Coil_잡지게재_A4단면.html`
-  — **세 산출물의 수치·문구는 항상 같아야 한다**(작동유체 58종 · 상관식 13종 · 실험 124케이스)
+  — **세 산출물의 수치·문구는 항상 같아야 한다**(작동유체 70종 · 상관식 13종 · 실험 124케이스)
 - 구 브랜드 페이지는 `../_이전버전_KoilForge/koilforge-site/` 에 보존
 
 ## 이 저장소에 넣지 말 것
