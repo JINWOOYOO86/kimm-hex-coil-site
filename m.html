@@ -276,7 +276,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
          data-i18n="hero.cta.app">프로그램 접속 ↗</a>
       <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta.contact">문의 · 협력 제안</a>
       <a class="btn btn-ghost" href="#features" data-i18n="hero.cta.features">기능 살펴보기</a>
-      <p class="applink" data-i18n="hero.applink"><b>hexcoil.kr</b> — 설치 없이 브라우저에서 바로 씁니다. 시작 화면의 <b>등록 없이 둘러보기</b>로 화면과 예제 결과를 먼저 살펴보실 수 있고, 계산을 실행하려면 <b>접근코드</b>가 필요합니다. 시작 화면의 [접근코드 발급 요청]에 회사·이름·이메일을 적어 주시면 이메일로 보내드립니다.</p>
+      <p class="applink" data-i18n="hero.applink"><b>hexcoil.kr</b> — 설치 없이 브라우저에서 바로 씁니다. 시작 화면의 <b>등록 없이 둘러보기</b>로 화면과 예제 결과를 먼저 살펴보실 수 있고, 계산을 실행하려면 <b>접근코드</b>가 필요합니다. 시작 화면의 [접근코드 발급 요청]에 회사·이름·이메일을 적어 주시면 이메일로 보내드립니다. 현재 <b>베타 테스트 중</b>이라 기능과 화면이 예고 없이 바뀔 수 있습니다.</p>
     </div>
   </div>
 
@@ -424,15 +424,12 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
     <div class="wrap">
       <p class="kicker">Mobile</p>
       <h2 data-i18n="mob.h">휴대폰에서도 설계 전체를</h2>
-      <p class="sub" data-i18n="mob.p">휴대폰 전용 화면에서 <b>형상 · 회로 · 유체 · 상관식 · 풍량</b>을 모두 편집하고
-         <b>성능 요약과 면/열별 분포</b>까지 확인합니다. 예제 케이스를 고르면 한 번에 채워집니다.
-         <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다.
-         홈 화면에 추가하면 주소창 없이 앱처럼 열립니다.</p>
+      <p class="sub" data-i18n="mob.p">휴대폰 전용 화면에서 <b>형상 · 회로 · 유체 · 상관식 · 풍량</b>을 모두 편집하고 <b>성능 요약과 면/열별 분포</b>까지 확인합니다. [빠른 시작] 예제를 누르면 형상·회로·운전 조건과 저장된 결과가 한 번에 채워지고, 튜토리얼도 휴대폰에서 그대로 따라 할 수 있습니다. <b>데스크톱과 같은 계산 엔진</b>이라 결과가 다르지 않습니다. 홈 화면에 추가하면 주소창 없이 앱처럼 열립니다.</p>
       <div class="chips">
         <span class="chip" data-i18n="mob.c.edit">형상·회로 편집</span>
         <span class="chip" data-i18n="mob.c.tap">탭으로 회로 연결</span>
         <span class="chip" data-i18n="mob.c.map">면/열별 분포</span>
-        <span class="chip" data-i18n="mob.c.xls">엑셀 내보내기</span>
+        <span class="chip" data-i18n="mob.c.xls">엑셀 템플릿 입출력</span>
         <span class="chip" data-i18n="mob.c.home">홈 화면에 추가</span>
       </div>
       <figure class="shot" style="max-width:280px;margin:16px auto 0">
@@ -448,7 +445,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
     <div class="wrap">
       <p class="kicker">Specification</p>
       <h2 data-i18n="spec.h">계산 · 입출력 사양</h2>
-      <p class="sub" data-i18n="spec.p">v1.0 기준입니다.</p>
+      <p class="sub" data-i18n="spec.p">v1.0 기준입니다(베타 테스트 중).</p>
       <table class="spec">
         <tbody>
           <tr><th data-i18n="spec.fluid.k">작동유체</th><td data-i18n="spec.fluid.v"><b>70종</b> — 물 · 공기 · R717(암모니아) · R744(CO<sub>2</sub>) · R290 · R410A ·
@@ -461,10 +458,8 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
             <br>미연결 튜브는 독립 1튜브 회로로 자동 처리
             <br>유량 분배: ΔP 균일화(반복 자기분배) 또는 균등 분배</td></tr>
           <tr><th data-i18n="spec.inlet.k">입구 지정 방식</th><td data-i18n="spec.inlet.v">(1) 압력·온도(단상) · (2) 압력·건도(2상) · (3) 압력·엔탈피 · (4) 출구압력·엔탈피(입구압력은 압력강하를 포함해 역산)<br>물 포함 모든 작동유체 공통 · 부동액 수용액은 (1)만</td></tr>
-          <tr><th data-i18n="spec.res.k">결과</th><td data-i18n="spec.res.v">용량 Q · 압력강하 ΔP · 응축수 · 공기/냉매 입출구 상태 ·
-            습공기선도 · P-h 선도 · 면/열별 분포 컬러맵</td></tr>
-          <tr><th data-i18n="spec.file.k">파일</th><td data-i18n="spec.file.v">엑셀 설계 템플릿 입출력 · 결과 내보내기(형상·회로도·조건·셀별 원자료)
-            <br><b>결과 파일</b>을 불러오면 계산 없이 결과 복원</td></tr>
+          <tr><th data-i18n="spec.res.k">결과</th><td data-i18n="spec.res.v">용량 Q(냉매·공기 평균) · 압력강하 ΔP · 응축수 · 공기/냉매 입출구 상태 · 습공기선도 · P-h 선도 · 면/열별 분포 컬러맵</td></tr>
+          <tr><th data-i18n="spec.file.k">파일</th><td data-i18n="spec.file.v">엑셀 설계 템플릿 입출력 · 결과 내보내기(형상·회로도·조건·셀별 원자료 — 허용된 접근코드에 한함)<br><b>결과 파일</b>을 불러오면 계산 없이 결과 복원</td></tr>
           <tr><th data-i18n="spec.env.k">실행환경</th><td data-i18n="spec.env.v">웹 브라우저(무설치) · 모바일 전용 화면 · 라이트/다크 화면 전환 · 한국어/English</td></tr>
           <tr><th data-i18n="spec.size.k">Sizing</th><td data-i18n="spec.size.v">목표 부하로부터 형상 후보 산출<span class="tag">개발 예정</span></td></tr>
         </tbody>
