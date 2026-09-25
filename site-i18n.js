@@ -116,7 +116,7 @@
     'spec.size.k': 'Sizing',
     'spec.size.v': 'Geometry candidates from a target load<span class="tag">planned</span>',
 
-    'val.h': 'Checked against 124 in-house experimental cases',
+    'val.h': 'Checked against 117 in-house experimental cases',
     'val.p': 'We publish, as it is, the range over which computed values were compared with measurements.',
     'val.water': '<b>Water</b>plain / louver fin · 3 rows',
     'val.r134a': '<b>R134a</b>including two-phase condensation and evaporation',
@@ -181,11 +181,11 @@
   var META_EN = {
     desktop: {
       title: 'KIMM-HEX Coil \u2014 Fin-tube heat exchanger design and performance prediction | KIMM',
-      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 124 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
+      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 117 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
     },
     mobile: {
       title: 'KIMM-HEX Coil \u2014 Fin-tube heat exchanger design and performance prediction | KIMM',
-      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 124 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
+      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 117 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
     }
   };
 
