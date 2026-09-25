@@ -119,7 +119,7 @@
     'val.h': 'Checked against 117 in-house experimental cases',
     'val.p': 'We publish, as it is, the range over which computed values were compared with measurements.',
     'val.water': '<b>Water</b>plain / louver fin · 3 rows',
-    'val.r134a': '<b>R134a</b>including two-phase condensation and evaporation',
+    'val.r134a': '<b>R134a</b>plain fin · 3-row evaporator',
     'val.r410a': '<b>R410A</b>high-pressure refrigerant conditions',
     'val.r1234yf': '<b>R1234yf</b>low-GWP refrigerant',
     'val.c1.h': 'Air-side correlations checked against the original papers',
