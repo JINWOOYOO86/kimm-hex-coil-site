@@ -203,6 +203,11 @@
   var els = document.querySelectorAll('[data-i18n]');
   var aels = document.querySelectorAll('[data-i18n-aria]');
   var tels = document.querySelectorAll('[data-i18n-alt]');
+  /*  화면 캡처 그림(2026-09-27) — data-i18n-src 가 붙은 <img> 는 영문일 때 assets/en/ 의 같은 이름 그림을 쓴다
+      (영문 앱 화면을 따로 찍은 것 — 홍보자료/_scripts 를 HX_SHOT_LANG=en 으로 돌려 만든다). 한국어는 HTML 의 src 그대로. */
+  var sels = document.querySelectorAll('[data-i18n-src]');
+  var KO_SRC = [];
+  for (var si = 0; si < sels.length; si++) KO_SRC[si] = sels[si].getAttribute('src');
   var metaDesc = document.querySelector('meta[name="description"]');
   var KO = {}, KO_ATTR = {}, KO_ALT = {}, KO_META = {};
 
@@ -230,6 +235,10 @@
       var tk = tels[t].getAttribute('data-i18n-alt');
       var tv = en ? ALT_EN[tk] : KO_ALT[tk];
       if (tv != null) tels[t].setAttribute('alt', tv);
+    }
+    for (var s = 0; s < sels.length; s++) {
+      var ks = KO_SRC[s], want = en ? ks.replace(/^assets\//, 'assets/en/') : ks;
+      if (sels[s].getAttribute('src') !== want) sels[s].setAttribute('src', want);
     }
     document.documentElement.lang = en ? 'en' : 'ko';
     document.title = en ? META_EN[page].title : KO_META.title;
