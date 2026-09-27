@@ -176,7 +176,15 @@
   };
 
   var ATTR_EN = { 'nav.menu': 'Main menu' };
-  var ALT_EN  = { 'brand.kimm': 'Korea Institute of Machinery & Materials' };
+  var ALT_EN  = { 'brand.kimm': 'Korea Institute of Machinery & Materials',
+    /*  화면 캡처 대체 텍스트(2026-09-27) — 영문 화면에서 한국어로 남아 있었다 */
+    'shot.dimension': 'Geometry input screen — the fin-tube heat exchanger is rendered in 3D with dimension lines for length, width, height and outer diameter.',
+    'shot.circuit': 'Circuit editor — refrigerant circuits are drawn in different colours on the tube grid, and stars mark the inlets.',
+    'shot.fluid': 'Fluid conditions screen — air-side and working-fluid inlet conditions and the correlation choices are laid out in two columns.',
+    'shot.airflow': '3D air-flow distribution — face velocity over the coil inlet face is shown as a 3D surface, fastest in the centre and slower at the edges.',
+    'shot.result1': 'Performance summary — capacity and pressure-drop KPIs, a psychrometric chart and a P-h diagram.',
+    'shot.result2': 'Face and column distributions — the heat exchanger cross-section is shown as a colour map of temperature.',
+    'shot.mobile': 'Mobile screen — KPI cards of the latest calculation and a case summary stacked vertically.' };
 
   var META_EN = {
     desktop: {

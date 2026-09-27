@@ -17,7 +17,8 @@
     if (sessionStorage.getItem('hx-view') === 'desktop') return;
     var narrow = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
     var ua = /Android|iPhone|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (narrow || ua) location.replace('m.html' + location.hash);
+    //  ?lang= 등 쿼리를 그대로 넘긴다(2026-09-27) — 종전에는 떼고 넘겨 영문으로 온 폰이 한국어로 열렸다
+    if (narrow || ua) location.replace('m.html' + location.search + location.hash);
   } catch (e) { /* 저장소가 막힌 브라우저면 그냥 데스크톱 판을 보여 준다 */ }
 })();
 </script>
@@ -529,7 +530,7 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img src="assets/dimension.webp" width="1200" height="940" loading="lazy"
+          <img data-i18n-alt="shot.dimension" src="assets/dimension.webp" width="1200" height="940" loading="lazy"
                alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
           <figcaption data-i18n="f1.cap">① 형상 입력 — L · W · H · OD · 핀 피치를 3D로 확인</figcaption>
         </figure>
@@ -546,7 +547,7 @@ h2{
           </ul>
         </div>
         <figure class="shot tall">
-          <img src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
+          <img data-i18n-alt="shot.circuit" src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
                alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
           <figcaption data-i18n="f2.cap">② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
         </figure>
@@ -564,7 +565,7 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img src="assets/fluid.webp" width="1400" height="876" loading="lazy"
+          <img data-i18n-alt="shot.fluid" src="assets/fluid.webp" width="1400" height="876" loading="lazy"
                alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
           <figcaption data-i18n="f3.cap">③ 유체 조건 — 공기 입구 상태 5방식 · 작동유체 70종</figcaption>
         </figure>
@@ -584,7 +585,7 @@ h2{
           <!--  2026-09-05: ④ 를 3D 단독으로 교체(1600x543 → 1400x894).
                 프로그램 ④ 화면이 [3D | 2D] 나란히로 바뀌었는데 3D 가 훨씬 높아
                 화면 전체를 오리면 오른쪽 아래가 크게 빈다 → 3D 원본을 쓴다. -->
-          <img src="assets/airflow.webp" width="1400" height="894" loading="lazy"
+          <img data-i18n-alt="shot.airflow" src="assets/airflow.webp" width="1400" height="894" loading="lazy"
                alt="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
           <figcaption data-i18n="f4.cap">④ 풍량 분포 — 코일 입구면 면속도 3D · 팬 σ · floor · β · C로 비균일 조절</figcaption>
         </figure>
@@ -602,7 +603,7 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img src="assets/result1.webp" width="1400" height="1166" loading="lazy"
+          <img data-i18n-alt="shot.result1" src="assets/result1.webp" width="1400" height="1166" loading="lazy"
                alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
           <figcaption data-i18n="f5.cap">⑤ 결과 (성능) — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
         </figure>
@@ -619,7 +620,7 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img src="assets/result2.webp" width="1400" height="1590" loading="lazy"
+          <img data-i18n-alt="shot.result2" src="assets/result2.webp" width="1400" height="1590" loading="lazy"
                alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
           <figcaption data-i18n="f6.cap">⑥ 결과 (맵) — 면/열별 분포 컬러맵</figcaption>
         </figure>
@@ -643,7 +644,7 @@ h2{
           </div>
         </div>
         <figure class="shot">
-          <img src="assets/mobile.webp" width="700" height="1137" loading="lazy"
+          <img data-i18n-alt="shot.mobile" src="assets/mobile.webp" width="700" height="1137" loading="lazy"
                alt="모바일 화면 — 최근 계산 KPI 카드와 케이스 요약이 세로로 배치되어 있다.">
           <figcaption data-i18n="mob.cap">모바일 화면</figcaption>
         </figure>
@@ -786,7 +787,7 @@ h2{
           <img src="assets/wordmark-kimm-hex-coil-white.svg" alt="KIMM-HEX Coil" style="height:19px;width:auto;display:inline-block;vertical-align:-2px">
           <span style="font-size:14px; font-weight:600; color:var(--gray-400)">v1.0</span>
         </div>
-        <img class="ftr-logo" src="assets/kimm-logo-kr-white.svg" alt="한국기계연구원" width="200" height="36">
+        <img class="ftr-logo" src="assets/kimm-logo-kr-white.svg" alt="한국기계연구원" data-i18n-alt="brand.kimm" width="200" height="36">
         <div class="org" data-i18n="ftr.org">
           히트펌프연구센터<br>
           대전광역시 유성구 가정북로 156<br>

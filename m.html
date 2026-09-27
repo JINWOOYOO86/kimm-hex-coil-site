@@ -312,7 +312,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
     <div class="wrap">
       <p class="kicker">Features</p>
       <h2 data-i18n="feat.h">설계는 자유롭게,<br>결과는 직관적으로.</h2>
-      <p class="sub">형상과 회로를 직접 구성하고, 구성한 조건으로 성능을 계산합니다.</p>
+      <p class="sub" data-i18n="feat.p">형상과 회로를 직접 구성하고, 구성한 조건으로 성능을 계산합니다.</p>
 
       <!--  2026-09-03: 스텝 1~6 화면을 **모두** 싣는다(사용자 요청).
             종전에는 ②회로 · ⑤성능요약 · ④풍량 · ⑥분포맵 네 장뿐이고
@@ -331,7 +331,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <li>평판핀·루버핀을 고르면 루버 치수(Lp·Lh)와 해당 상관식이 함께 나타납니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/dimension.webp" width="1200" height="940" loading="lazy"
+          <img data-i18n-alt="shot.dimension" src="assets/dimension.webp" width="1200" height="940" loading="lazy"
                alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
           <figcaption data-i18n="f1.cap">① 형상 입력 — L · W · H · OD · 핀 피치를 3D로 확인</figcaption>
         </figure>
@@ -346,7 +346,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <li>유량 분배는 <b>ΔP 균일화(반복 자기분배)</b> 또는 균등 분배 중 선택합니다.</li>
         </ul>
         <figure class="shot tall">
-          <img src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
+          <img data-i18n-alt="shot.circuit" src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
                alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
           <figcaption data-i18n="f2.cap">② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
         </figure>
@@ -362,7 +362,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <li>단상·2상 열전달과 압력강하 상관식을 각각 선택합니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/fluid.webp" width="1400" height="876" loading="lazy"
+          <img data-i18n-alt="shot.fluid" src="assets/fluid.webp" width="1400" height="876" loading="lazy"
                alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
           <figcaption data-i18n="f3.cap">③ 유체 조건 — 공기 입구 상태 5방식 · 작동유체 70종</figcaption>
         </figure>
@@ -380,7 +380,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <!--  2026-09-05: ④ 를 3D 단독으로 교체(1600x543 → 1400x894).
                 프로그램 ④ 화면이 [3D | 2D] 나란히로 바뀌었는데 3D 가 훨씬 높아
                 화면 전체를 오리면 오른쪽 아래가 크게 빈다 → 3D 원본을 쓴다. -->
-          <img src="assets/airflow.webp" width="1400" height="894" loading="lazy"
+          <img data-i18n-alt="shot.airflow" src="assets/airflow.webp" width="1400" height="894" loading="lazy"
                alt="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
           <figcaption data-i18n="f4.cap">④ 풍량 분포 — 코일 입구면 면속도 3D · 팬 σ · floor · β · C로 비균일 조절</figcaption>
         </figure>
@@ -396,7 +396,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <li>결과는 습공기선도·P-h 선도와 회로별 유량 분배로 함께 제시됩니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/result1.webp" width="1400" height="1166" loading="lazy"
+          <img data-i18n-alt="shot.result1" src="assets/result1.webp" width="1400" height="1166" loading="lazy"
                alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
           <figcaption data-i18n="f5.cap">⑤ 결과 (성능) — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
         </figure>
@@ -411,7 +411,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
           <li>면/열별을 골라 보고, 상세 분포는 컨투어로 다시 그립니다.</li>
         </ul>
         <figure class="shot">
-          <img src="assets/result2.webp" width="1400" height="1590" loading="lazy"
+          <img data-i18n-alt="shot.result2" src="assets/result2.webp" width="1400" height="1590" loading="lazy"
                alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
           <figcaption data-i18n="f6.cap">⑥ 결과 (맵) — 면/열별 분포 컬러맵</figcaption>
         </figure>
@@ -433,7 +433,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
         <span class="chip" data-i18n="mob.c.home">홈 화면에 추가</span>
       </div>
       <figure class="shot" style="max-width:280px;margin:16px auto 0">
-        <img src="assets/mobile.webp" width="700" height="1137" loading="lazy"
+        <img data-i18n-alt="shot.mobile" src="assets/mobile.webp" width="700" height="1137" loading="lazy"
              alt="모바일 화면 — 최근 계산 KPI 카드와 케이스 요약이 세로로 배치되어 있다.">
         <figcaption data-i18n="mob.cap">모바일 화면</figcaption>
       </figure>
@@ -481,12 +481,12 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
       </ul>
       <div class="cardbox">
         <h3 data-i18n="val.c1.h">공기측 상관식 원논문 대조</h3>
-        <p>구현된 공기측 열전달·압력강하 상관식을 원논문의 정의식과 하나씩 대조해
+        <p data-i18n="val.c1.p">구현된 공기측 열전달·압력강하 상관식을 원논문의 정의식과 하나씩 대조해
            기준면적·수력직경·물성 기준을 맞췄습니다.</p>
       </div>
       <div class="cardbox">
         <h3 data-i18n="val.c2.h">실험 기간</h3>
-        <p>2023~2025년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다.</p>
+        <p data-i18n="val.c2.p">2023~2025년 한국기계연구원 히트펌프연구센터 열교환기 시험설비에서 수행한 자체 실험 데이터입니다.</p>
       </div>
     </div>
   </section>
@@ -535,7 +535,7 @@ html[lang="en"] .hdr .ctr, html[lang="en"] .hdr .div{display:none}
   <div class="wrap">
     <div class="name"><img src="assets/wordmark-kimm-hex-coil-white.svg" alt="KIMM-HEX Coil">
       <span style="font-size:12px;font-weight:600;color:var(--gray-400)"> v1.0</span></div>
-    <img class="ftr-logo" src="assets/kimm-logo-kr-white.svg" alt="한국기계연구원">
+    <img class="ftr-logo" src="assets/kimm-logo-kr-white.svg" alt="한국기계연구원" data-i18n-alt="brand.kimm">
     <div class="org" data-i18n="ftr.org">히트펌프연구센터<br>대전광역시 유성구 가정북로 156<br>
       류진우 책임연구원 <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a><br>
       송찬호 책임연구원 <a href="mailto:sch@kimm.re.kr">sch@kimm.re.kr</a></div>
