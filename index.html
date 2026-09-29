@@ -416,6 +416,11 @@ h2{
 }
 .appaddr a{color:#fff; text-decoration:underline; text-underline-offset:3px}
 .appaddr b{color:#fff}
+/* ── 단계 영상(2026-09-29) ── */
+.shot video.clip{width:100%; height:auto; display:block; background:#fff}
+.shot .clip-en{display:none}
+html[lang="en"] .shot video.clip{display:none}
+html[lang="en"] .shot .clip-en{display:block}
 </style>
 </head>
 <body data-page="desktop">
@@ -530,8 +535,11 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img data-i18n-alt="shot.dimension" data-i18n-src src="assets/dimension.webp" width="1200" height="940" loading="lazy"
-               alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="1127"
+               poster="assets/clips/dimension_poster.webp" aria-label="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
+            <source src="assets/clips/dimension.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.dimension" data-i18n-src src="assets/dimension.webp" width="1200" height="940" loading="lazy" alt="형상 입력 화면 — 핀튜브 열교환기가 3차원으로 렌더링되고 길이·폭·높이·외경 치수선이 표시된다.">
           <figcaption data-i18n="f1.cap">① 형상 입력 — L · W · H · OD · 핀 피치를 3D로 확인</figcaption>
         </figure>
       </div>
@@ -547,8 +555,11 @@ h2{
           </ul>
         </div>
         <figure class="shot tall">
-          <img data-i18n-alt="shot.circuit" data-i18n-src src="assets/circuit.webp" width="1000" height="1452" loading="lazy"
-               alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="2033"
+               poster="assets/clips/circuit_poster.webp" aria-label="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
+            <source src="assets/clips/circuit.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.circuit" data-i18n-src src="assets/circuit.webp" width="1000" height="1452" loading="lazy" alt="회로 편집 화면 — 튜브 격자 위에 색으로 구분된 냉매 회로가 그려져 있고 별표가 입구를 표시한다.">
           <figcaption data-i18n="f2.cap">② 냉매 회로 — 색 = 회로 · ★ = 입구 · U-bend 실선/점선 구분</figcaption>
         </figure>
       </div>
@@ -565,8 +576,11 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img data-i18n-alt="shot.fluid" data-i18n-src src="assets/fluid.webp" width="1400" height="876" loading="lazy"
-               alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="876"
+               poster="assets/clips/fluid_poster.webp" aria-label="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
+            <source src="assets/clips/fluid.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.fluid" data-i18n-src src="assets/fluid.webp" width="1400" height="876" loading="lazy" alt="유체 조건 화면 — 공기측과 작동유체측 입구 조건, 상관식 선택 항목이 두 열로 배치되어 있다.">
           <figcaption data-i18n="f3.cap">③ 유체 조건 — 공기 입구 상태 5방식 · 작동유체 70종</figcaption>
         </figure>
       </div>
@@ -585,8 +599,11 @@ h2{
           <!--  2026-09-05: ④ 를 3D 단독으로 교체(1600x543 → 1400x894).
                 프로그램 ④ 화면이 [3D | 2D] 나란히로 바뀌었는데 3D 가 훨씬 높아
                 화면 전체를 오리면 오른쪽 아래가 크게 빈다 → 3D 원본을 쓴다. -->
-          <img data-i18n-alt="shot.airflow" data-i18n-src src="assets/airflow.webp" width="1400" height="894" loading="lazy"
-               alt="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="827"
+               poster="assets/clips/airflow_poster.webp" aria-label="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
+            <source src="assets/clips/airflow.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.airflow" data-i18n-src src="assets/airflow.webp" width="1400" height="894" loading="lazy" alt="풍량 분포 3D 화면 — 코일 입구면의 면속도가 3차원 곡면으로 표시되고 중앙이 빠르고 가장자리가 느리다.">
           <figcaption data-i18n="f4.cap">④ 풍량 분포 — 코일 입구면 면속도 3D · 팬 σ · floor · β · C로 비균일 조절</figcaption>
         </figure>
       </div>
@@ -603,8 +620,11 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img data-i18n-alt="shot.result1" data-i18n-src src="assets/result1.webp" width="1400" height="1166" loading="lazy"
-               alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="1422"
+               poster="assets/clips/result1_poster.webp" aria-label="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
+            <source src="assets/clips/result1.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.result1" data-i18n-src src="assets/result1.webp" width="1400" height="1422" loading="lazy" alt="성능 요약 화면 — 용량과 압력강하 KPI, 습공기선도, P-h 선도가 배치되어 있다.">
           <figcaption data-i18n="f5.cap">⑤ 결과 (성능) — 성능 요약 · 용량 · 압력강하 · 제습량</figcaption>
         </figure>
       </div>
@@ -620,8 +640,11 @@ h2{
           </ul>
         </div>
         <figure class="shot">
-          <img data-i18n-alt="shot.result2" data-i18n-src src="assets/result2.webp" width="1400" height="1590" loading="lazy"
-               alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
+          <video class="clip" autoplay muted loop playsinline preload="metadata" width="1400" height="1590"
+               poster="assets/clips/result2_poster.webp" aria-label="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
+            <source src="assets/clips/result2.mp4" type="video/mp4">
+          </video>
+          <img class="clip-en" data-i18n-alt="shot.result2" data-i18n-src src="assets/result2.webp" width="1400" height="1590" loading="lazy" alt="면·열별 분포 화면 — 열교환기 단면이 온도에 따라 색으로 구분된 컬러맵으로 표시된다.">
           <figcaption data-i18n="f6.cap">⑥ 결과 (맵) — 면/열별 분포 컬러맵</figcaption>
         </figure>
       </div>
@@ -820,6 +843,19 @@ h2{
 
 
 <!--  한국어 ↔ English 전환 — 사전·엔진은 m.html 과 **한 벌을 공유**한다. -->
+<script>
+/* 단계 영상 — 보일 때만 재생, 움직임 줄이기 설정이면 멈춤(2026-09-29) */
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video.clip'));
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vids.forEach(function (v) { v.muted = true; if (still) { v.removeAttribute('autoplay'); v.pause(); } });
+  if (still || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); });
+  }, { threshold: 0.25 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
 <script src="site-i18n.js" defer></script>
 </body>
 </html>
