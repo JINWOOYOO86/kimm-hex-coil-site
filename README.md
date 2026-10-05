@@ -8,6 +8,13 @@
 - `m.html` — **모바일 판**. 한 열·큰 터치 영역·짧은 스크롤. 문구와 이미지는 데스크톱 판과 같다
   (⚠️ 수치·문구를 고치면 **두 파일을 함께** 고칠 것 — 갈라지면 어느 쪽이 맞는지 알 수 없다)
 - `assets/` — 화면 캡처(WebP) · KIMM 로고(SVG) · 제품 마크(`icon-fintube*.svg`)
+- `assets/video/` — **1분 소개 영상**(2026-10-05): `intro-ko.mp4` 는 `홍보자료/KIMM-HEX-Coil_모션그래픽_1080p.mp4` 의 사본(5.3 MB, 64초, 무음),
+  `intro-poster.webp` 는 그 영상 15초 장면(1280×720). 히어로 `1분 소개 영상` 버튼 → 대화상자에서 재생(누를 때만 받음).
+  모바일은 누르면 전체 화면(아이폰은 `playsinline` 을 뺀 덕에 자체 플레이어).
+  **영문 화면은 `intro-en.mp4` + `intro-poster-en.webp`**(2026-10-05(3), `홍보자료/KIMM-HEX-Coil_motion_EN_1080p.mp4` 사본) — 버튼을 누를 때 언어에 맞춰 소스를 바꾼다.
+  ⚠️ 영상을 다시 구우면 **이 사본과 포스터도 함께** 바꿀 것(한·영 두 벌).
+- [프로그램 둘러보기 ↗](헤더·히어로) = `https://hexcoil.kr/demo` — 둘러보기 바로가기(2026-10-05(3), 종전 '프로그램 접속' → 메인).
+  `site-i18n.js` 가 경로는 두고 `?lang=` 만 붙인다.
 
 ## 이미지는 지면과 같은 원본을 쓴다
 
@@ -56,7 +63,7 @@ capture_ui.py → build_assets.py → 홍보자료/assets/*.png → build_site_a
 - 색·타이포는 `index.html` 상단 `:root` 토큰 (KIMM Design System 값)
 - 문구 출처: `홍보자료/KIMM-HEX-Coil_리플릿_A4양면.html`, `KIMM-HEX-Coil_잡지게재_A4단면.html`
   — **세 산출물의 수치·문구는 항상 같아야 한다**(작동유체 70종 · 상관식 13종 · 실험 117케이스)
-- 구 브랜드 페이지는 `../_이전버전_KoilForge/koilforge-site/` 에 보존
+- 구 브랜드 페이지는 `../_이전버전/KoilForge/koilforge-site/` 에 보존
 
 ## 이 저장소에 넣지 말 것
 

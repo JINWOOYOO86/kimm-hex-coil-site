@@ -421,6 +421,17 @@ h2{
 .shot .clip-en{display:none}
 html[lang="en"] .shot video.clip{display:none}
 html[lang="en"] .shot .clip-en{display:block}
+/* ── 1분 소개 영상(2026-10-05) — 히어로 버튼 → 대화상자에서 재생. 영문 화면은 영문 영상(intro-en.mp4) ── */
+.btn .ico{width:12px; height:12px; flex:0 0 auto}
+.vdlg{width:min(1280px, calc(100vw - 48px)); max-width:none; max-height:none; padding:0; border:0;
+  border-radius:var(--radius-lg); background:var(--gray-900); color:#fff; box-shadow:var(--shadow-lg); overflow:hidden}
+.vdlg::backdrop{background:rgba(11,21,59,.8)}
+.vdlg video{display:block; width:100%; height:auto; max-height:calc(100vh - 120px); aspect-ratio:16/9; background:#000}
+.vdlg .bar{display:flex; align-items:center; gap:12px; padding:10px 12px 10px 20px; font-size:14px; color:var(--gray-300)}
+.vdlg .bar .t{flex:1}
+.vdlg .x{font:inherit; font-weight:700; color:#fff; background:rgba(255,255,255,.12); border:0; border-radius:8px; padding:8px 16px; cursor:pointer}
+.vdlg .x:hover{background:rgba(255,255,255,.22)}
+.vdlg .x:focus-visible{outline:2px solid #fff; outline-offset:2px}
 </style>
 </head>
 <body data-page="desktop">
@@ -438,9 +449,10 @@ html[lang="en"] .shot .clip-en{display:block}
       <a href="#features" data-i18n="nav.features">기능</a>
       <a href="#spec" data-i18n="nav.spec">사양</a>
       <a href="#validation" data-i18n="nav.validation">검증</a>
-      <!--  프로그램 바로가기(2026-09-17) — 상시 서버 고정 주소. 접근코드가 있어야 들어간다. -->
-      <a href="https://hexcoil.kr" class="btn btn-primary btn-sm" target="_blank" rel="noopener"
-         data-i18n="nav.app">프로그램 접속 ↗</a>
+      <!--  프로그램 바로가기(2026-09-17) — 상시 서버 고정 주소. 2026-10-05 사용자 요청: '프로그램 접속' → '프로그램 둘러보기',
+            링크는 둘러보기 바로가기 /demo(등록 없이 곧장 둘러보기 세션 — 계산만 접근코드가 필요). -->
+      <a href="https://hexcoil.kr/demo" class="btn btn-primary btn-sm" target="_blank" rel="noopener"
+         data-i18n="nav.app">프로그램 둘러보기 ↗</a>
       <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="nav.contact">접속 문의</a>
       <!--  언어 전환: .btn 이 아닌 nav a 는 860px 아래에서 숨으므로 button 으로 둔다. -->
       <button class="lang" type="button" id="langBtn" aria-label="Language / 언어">EN</button>
@@ -462,10 +474,12 @@ html[lang="en"] .shot .clip-en{display:block}
       <p class="lede" data-i18n="hero.lede"><b>형상과 회로를 직접 구성</b>하고, 유효성 검사를 통과한 회로로 계산합니다.
         설치 절차 없이 웹 브라우저에서 바로 사용합니다.</p>
       <div class="cta-row">
-        <!--  2026-09-17: 상시 서버가 떠서 히어로 첫 버튼을 '프로그램 접속' 으로 바꿨다.
+        <!--  2026-10-05: '프로그램 접속' → '프로그램 둘러보기'(https://hexcoil.kr/demo, 사용자 요청).
+              2026-09-17: 상시 서버가 떠서 히어로 첫 버튼을 '프로그램 접속' 으로 바꿨다.
               접근코드가 필요하므로 바로 아래 한 줄로 그 사실을 밝힌다. -->
-        <a class="btn btn-primary" href="https://hexcoil.kr" target="_blank" rel="noopener"
-           data-i18n="hero.cta.app">프로그램 접속 ↗</a>
+        <a class="btn btn-primary" href="https://hexcoil.kr/demo" target="_blank" rel="noopener"
+           data-i18n="hero.cta.app">프로그램 둘러보기 ↗</a>
+        <button type="button" class="btn btn-ghost vid-open" aria-haspopup="dialog" aria-controls="intro-dlg"><svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.2v9.6L10.6 6z" fill="currentColor"/></svg><span data-i18n="vid.open">1분 소개 영상</span></button>
         <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta.contact">문의 · 협력 제안</a>
         <a class="btn btn-ghost" href="#features" data-i18n="hero.cta.features">기능 살펴보기</a>
       </div>
@@ -551,7 +565,7 @@ html[lang="en"] .shot .clip-en{display:block}
           <ul data-i18n="f2.ul">
             <li>튜브를 드래그해 배관을 연결하고, <b>분지(split)·합지(merge)</b>를 구성합니다(비순환 회로).</li>
             <li>순환·중복 연결을 실시간으로 검사하고, 연결하지 않은 튜브는 <b>독립 1튜브 회로</b>로 자동 처리합니다.</li>
-            <li>유량 분배는 <b>ΔP 균일화(반복 자기분배)</b> 또는 균등 분배 중 선택합니다.</li>
+            <li>유량 분배는 <b>균일 압력강하(ΔP)</b> 또는 균등 분배 중 선택합니다.</li>
           </ul>
         </div>
         <figure class="shot tall">
@@ -699,7 +713,7 @@ html[lang="en"] .shot .clip-en{display:block}
             <tr><th data-i18n="spec.cir.k">회로</th><td data-i18n="spec.cir.v">
               드래그 편집 · 분지(split)/합지(merge) · 회로별 튜브 수 불균등 허용
               <br>미연결 튜브는 독립 1튜브 회로로 자동 처리
-              <br>유량 분배: ΔP 균일화(반복 자기분배) 또는 균등 분배
+              <br>유량 분배: 균일 압력강하(ΔP) 또는 균등 분배
             </td></tr>
             <tr><th data-i18n="spec.inlet.k">입구 지정 방식</th><td data-i18n="spec.inlet.v">(1) 압력·온도(단상) · (2) 압력·건도(2상) · (3) 압력·엔탈피 · (4) 출구압력·엔탈피(입구압력은 압력강하를 포함해 역산)<br>물 포함 모든 작동유체 공통 · 부동액 수용액은 (1)만</td></tr>
             <tr><th data-i18n="spec.res.k">결과</th><td data-i18n="spec.res.v">용량 Q(냉매·공기 평균) · 압력강하 ΔP · 응축수 · 공기/냉매 입출구 상태 · 습공기선도 · P-h 선도 · 면/열별 분포 컬러맵</td></tr>
@@ -842,6 +856,15 @@ html[lang="en"] .shot .clip-en{display:block}
 </footer>
 
 
+<!--  1분 소개 영상(2026-10-05) — 홍보자료/KIMM-HEX-Coil_모션그래픽_1080p.mp4 의 사본(5.3 MB, 64초, 무음).
+      누를 때만 받는다(preload="none"). 영상을 다시 구우면 assets/video/intro-ko.mp4 도 바꿀 것. -->
+<dialog class="vdlg" id="intro-dlg" aria-label="KIMM-HEX Coil 1분 소개 영상" data-i18n-aria="vid.dlg">
+  <video id="intro-vid" controls playsinline preload="none" width="1920" height="1080" poster="assets/video/intro-poster.webp">
+    <source src="assets/video/intro-ko.mp4" type="video/mp4">
+  </video>
+  <div class="bar"><span class="t" data-i18n="vid.bar">KIMM-HEX Coil 소개 · 64초 · 소리 없음</span><button type="button" class="x" data-close data-i18n="vid.close">닫기</button></div>
+</dialog>
+
 <!--  한국어 ↔ English 전환 — 사전·엔진은 m.html 과 **한 벌을 공유**한다. -->
 <script>
 /* 단계 영상 — 보일 때만 재생, 움직임 줄이기 설정이면 멈춤(2026-09-29) */
@@ -854,6 +877,30 @@ html[lang="en"] .shot .clip-en{display:block}
     es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); });
   }, { threshold: 0.25 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+/* 1분 소개 영상 — 버튼 → 대화상자에서 재생, 닫으면 멈춘다(2026-10-05) */
+(function () {
+  var dlg = document.getElementById('intro-dlg'), v = document.getElementById('intro-vid');
+  if (!dlg || !v) return;
+  /*  언어에 맞는 영상(2026-10-05(3) — 영문판 intro-en.mp4 추가). 언어를 바꾼 뒤 처음 열 때만 소스를 갈아 끼운다 */
+  function pick() {
+    var en = document.documentElement.lang === 'en', s = v.querySelector('source');
+    var src = en ? 'assets/video/intro-en.mp4' : 'assets/video/intro-ko.mp4';
+    if (s.getAttribute('src') === src) return;
+    s.setAttribute('src', src);
+    v.setAttribute('poster', en ? 'assets/video/intro-poster-en.webp' : 'assets/video/intro-poster.webp');
+    v.load();
+  }
+  [].forEach.call(document.querySelectorAll('.vid-open'), function (b) {
+    b.addEventListener('click', function () {
+      pick();
+      if (typeof dlg.showModal !== 'function') { location.href = v.querySelector('source').src; return; }
+      dlg.showModal();
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+    });
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.hasAttribute('data-close')) dlg.close(); });
+  dlg.addEventListener('close', function () { v.pause(); });
 })();
 </script>
 <script src="site-i18n.js" defer></script>

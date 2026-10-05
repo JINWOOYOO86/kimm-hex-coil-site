@@ -21,13 +21,13 @@
     'skip': 'Skip to content',
     'brand.ctr': 'Heat Pump Research Center',
     'nav.features': 'Features', 'nav.spec': 'Specifications', 'nav.validation': 'Validation',
-    'nav.app': 'Open the program ↗', 'nav.contact': 'Request access',
+    'nav.app': 'Look around ↗', 'nav.contact': 'Request access',
 
     'hero.eyebrow': 'Fin-tube heat exchanger design and performance prediction software',
     'hero.tagline': 'Design freely. Read the results at a glance.',
     'hero.deffn': 'Geometry · refrigerant circuitry · operating conditions<span class="ar">→</span>capacity · pressure drop · condensate',
     'hero.lede': '<b>Build the geometry and the circuitry yourself</b>, and compute with a circuit that passes validation. It runs in a web browser — nothing to install.',
-    'hero.cta.app': 'Open the program ↗',
+    'hero.cta.app': 'Look around the program ↗',
     'hero.cta.contact': 'Contact · collaboration',
     'hero.cta.features': 'See the features',
     'hero.applink': '<b>hexcoil.kr</b> — runs in your browser, with nothing to install. Choose <b>Look around without registering</b> on the start page to see the screens and an example result first; running a calculation needs an <b>access code</b>. Enter your company, name and e-mail under [Request an access code] on the start page and we will e-mail one to you. The service is in <b>beta testing</b>, so features and screens may change without notice.',
@@ -60,7 +60,7 @@
     'f2.h': 'Circuit — drawn by dragging',
     'f2.ul': '<li>Drag tubes to connect them and build <b>splits and merges</b> (acyclic circuits).</li>'
            + '<li>Loops and duplicate connections are checked as you draw, and tubes left unconnected become <b>independent single-tube circuits</b> automatically.</li>'
-           + '<li>Flow distribution is either <b>ΔP equalisation (iterative self-distribution)</b> or an equal split.</li>',
+           + '<li>Flow distribution is either <b>uniform pressure drop (ΔP)</b> or an equal split.</li>',
     'f2.cap': '② Circuit — colour = circuit · ★ = inlet · U-bends solid/dashed',
 
     'f3.h': 'Fluid — 70 working fluids',
@@ -104,7 +104,7 @@
     'spec.tube.k': 'Tube side',
     'spec.tube.v': 'Single-phase heat transfer and friction; two-phase condensation and evaporation heat transfer and pressure drop — correlations selectable',
     'spec.cir.k': 'Circuitry',
-    'spec.cir.v': 'Drag editing · split/merge · unequal tube count per circuit allowed<br>Unconnected tubes become independent single-tube circuits automatically<br>Flow distribution: ΔP equalisation (iterative self-distribution) or equal split',
+    'spec.cir.v': 'Drag editing · split/merge · unequal tube count per circuit allowed<br>Unconnected tubes become independent single-tube circuits automatically<br>Flow distribution: uniform pressure drop (ΔP) or equal split',
     'spec.inlet.k': 'Inlet specification',
     'spec.inlet.v': '(1) pressure · temperature (single phase) · (2) pressure · vapour quality (two phase) · (3) pressure · enthalpy · (4) outlet pressure · enthalpy (the inlet pressure is back-calculated including the pressure drop)<br>Common to every working fluid including water · brines use (1) only',
     'spec.res.k': 'Results',
@@ -165,17 +165,23 @@
     'ftr.oss': '<strong>Open-source notice</strong> — this program includes open-source components such as Flask · CoolProp · NumPy · pandas · openpyxl · matplotlib · Pillow · qrcode, each under its own licence (BSD-3-Clause · MIT · Apache-2.0 · HPND and others). The full list and the licence texts are available on the notice screen inside the program.',
     'ftr.priv': 'This introduction page uses no third-party scripts, tracking tools or web fonts.',
 
+    /*  1분 소개 영상(2026-10-05(3) — 영문 화면은 영문 영상 intro-en.mp4) */
+    'vid.open': '1-minute introduction video',
+    'vid.bar': 'KIMM-HEX Coil introduction \u00b7 64 s \u00b7 no sound',
+    'vid.close': 'Close',
+
     /*  모바일 판에만 있는 문구 */
     'tolarge': 'View the desktop version \u2192'
   };
 
   /*  모바일 판에서만 다른 값(마크업이 다르거나 토큰이 없는 것) */
   var EN_M = {
+    'vid.bar': '64 s \u00b7 no sound \u00b7 turn your phone sideways',
     'hero.tagline': 'Design freely,<br>read the results at a glance.',
     'spec.fluid.v': '<b>70 fluids</b> \u2014 water \u00b7 air \u00b7 R717 (ammonia) \u00b7 R744 (CO<sub>2</sub>) \u00b7 R290 \u00b7 R410A \u00b7 R134a \u00b7 R1234yf \u00b7 <b>brines (12 EG/PG aqueous solutions)</b> and more<br><span style="font-size:13px; color:var(--gray-500)">Properties from CoolProp</span>'
   };
 
-  var ATTR_EN = { 'nav.menu': 'Main menu' };
+  var ATTR_EN = { 'nav.menu': 'Main menu', 'vid.dlg': 'KIMM-HEX Coil 1-minute introduction video' };
   var ALT_EN  = { 'brand.kimm': 'Korea Institute of Machinery & Materials',
     /*  화면 캡처 대체 텍스트(2026-09-27) — 영문 화면에서 한국어로 남아 있었다 */
     'shot.dimension': 'Geometry input screen — the fin-tube heat exchanger is rendered in 3D with dimension lines for length, width, height and outer diameter.',
@@ -250,8 +256,13 @@
     try { localStorage.setItem('hx-site-lang', lang); } catch (e) {}
     /*  프로그램(hexcoil.kr) 링크에 ?lang= 을 붙인다(2026-09-23) — 다른 도메인이라 저장값을 나눠 쓸 수 없다.
         시작 페이지가 이 값을 받아 같은 언어로 열고, 들어간 뒤 메인 프로그램도 그 언어로 연다. */
+    //  2026-10-05: 경로는 그대로 두고 lang 만 바꾼다 — [프로그램 둘러보기]는 /demo(둘러보기 바로가기)라 루트로 덮으면 안 된다.
     var apps = document.querySelectorAll('a[href^="https://hexcoil.kr"]');
-    for (var a = 0; a < apps.length; a++) apps[a].setAttribute('href', 'https://hexcoil.kr/?lang=' + lang);
+    for (var a = 0; a < apps.length; a++) {
+      var h = apps[a].getAttribute('href').replace(/[?#].*$/, '');
+      if (h === 'https://hexcoil.kr') h += '/';
+      apps[a].setAttribute('href', h + '?lang=' + lang);
+    }
   }
 
   /*  전환 버튼은 CSS 에서 감춰 두고 여기서 꺼낸다 — 이 파일이 못 뜨면
