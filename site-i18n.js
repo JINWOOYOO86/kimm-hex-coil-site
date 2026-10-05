@@ -21,105 +21,105 @@
     'skip': 'Skip to content',
     'brand.ctr': 'Heat Pump Research Center',
     'nav.features': 'Features', 'nav.spec': 'Specifications', 'nav.validation': 'Validation',
-    'nav.app': 'Look around ↗', 'nav.contact': 'Request access',
+    'nav.app': 'Try it ↗', 'nav.contact': 'Request access',
 
     'hero.eyebrow': 'Fin-tube heat exchanger design and performance prediction software',
     'hero.tagline': 'Design freely. Read the results at a glance.',
-    'hero.deffn': 'Geometry · refrigerant circuitry · operating conditions<span class="ar">→</span>capacity · pressure drop · condensate',
-    'hero.lede': '<b>Build the geometry and the circuitry yourself</b>, and compute with a circuit that passes validation. It runs in a web browser — nothing to install.',
-    'hero.cta.app': 'Look around the program ↗',
-    'hero.cta.contact': 'Contact · collaboration',
+    'hero.deffn': 'Geometry, refrigerant circuiting, operating conditions<span class="ar">→</span>capacity, pressure drop, condensate rate',
+    'hero.lede': '<b>Build the geometry and circuiting yourself</b>. The app validates the circuit before calculating performance. It runs in your browser, with nothing to install.',
+    'hero.cta.app': 'Try it as a guest ↗',
+    'hero.cta.contact': 'Contact us',
     'hero.cta.features': 'See the features',
-    'hero.applink': '<b>hexcoil.kr</b> — runs in your browser, with nothing to install. Choose <b>Look around without registering</b> on the start page to see the screens and an example result first; running a calculation needs an <b>access code</b>. Enter your company, name and e-mail under [Request an access code] on the start page and we will e-mail one to you. The service is in <b>beta testing</b>, so features and screens may change without notice.',
+    'hero.applink': '<b>hexcoil.kr</b> runs in your browser with nothing to install. Select <b>Try as a guest</b> to explore the screens and view sample results. An <b>access code</b> is required to run calculations; select [Request access] and enter your organization, name, and email. The service is in <b>beta</b>, so features and screens may change without notice.',
 
     'stats.u.kind': '&nbsp;fluids', 'stats.u.case': '&nbsp;cases', 'stats.u.kind2': '&nbsp;models', 'stats.u.dir': '&nbsp;directions',
-    'stats.fluids': 'Working fluids supported<br>natural refrigerants · air · brines included',
+    'stats.fluids': 'Tube-side fluids supported<br>natural refrigerants · air · glycols included',
     'stats.valid': 'Validated against in-house experiments<br>water · R134a · R1234yf · R410A',
     'stats.corr': 'Air-side heat transfer correlations<br>plain fin 8 · louver fin 5',
     'stats.grid': 'Grid-based analysis<br>local state in every cell',
 
-    'flow.h': 'Design review finished in six steps',
-    'flow.p': 'Work down the order on the left of the screen and you go from geometry input to distribution maps. New to it? A <b>guided tutorial</b> (Korean · English) points you through each screen.',
-    'step.geo.h': 'HX Dimension', 'step.geo.p': 'Tube and fin geometry<br>rows · tiers · pitches',
-    'step.cir.h': 'Circuit', 'step.cir.p': 'Drag the tubing<br>split · merge',
-    'step.flu.h': 'Fluid', 'step.flu.p': 'Air inlet state<br>70 working fluids',
-    'step.air.h': 'Air Distribution', 'step.air.p': 'Fan non-uniformity<br>2D · 3D preview',
-    'step.res1.h': 'Result (Performance)', 'step.res1.p': 'Performance summary<br>capacity · pressure drop',
-    'step.res2.h': 'Result (Map)', 'step.res2.p': 'Face/row distribution<br>colour maps',
+    'flow.h': 'Complete a design review in six steps',
+    'flow.p': 'Follow the six steps from geometry to distribution maps. New users can take the <b>guided tour</b> in Korean or English.',
+    'step.geo.h': 'Geometry', 'step.geo.p': 'Tube and fin geometry<br>rows · tubes per row · spacing',
+    'step.cir.h': 'Circuit', 'step.cir.p': 'Drag to connect tubes<br>branch · merge',
+    'step.flu.h': 'Fluid', 'step.flu.p': 'Air inlet state<br>70 tube-side fluids',
+    'step.air.h': 'Airflow', 'step.air.p': 'Nonuniform airflow<br>2D and 3D preview',
+    'step.res1.h': 'Performance', 'step.res1.p': 'Performance summary<br>capacity · pressure drop',
+    'step.res2.h': 'Maps', 'step.res2.p': 'Face/tube-row distributions<br>color maps',
 
     'feat.h': 'Design freely,<br>read the results at a glance.',
-    'feat.p': 'Build the geometry and the circuitry yourself, then compute performance under the conditions you set.',
+    'feat.p': 'Build the geometry and the circuiting yourself, then compute performance under the conditions you set.',
 
-    'f1.h': 'HX Dimension — type a dimension, see it in 3D',
-    'f1.ul': '<li>Enter tube length, rows, tiers, pitches and outer diameter and the <b>3D model updates immediately</b>.</li>'
+    'f1.h': 'Geometry — enter dimensions and preview the coil in 3D',
+    'f1.ul': '<li>Enter tube length, rows, tubes per row, tube spacing, and OD; the <b>3D model updates immediately</b>.</li>'
            + '<li>It is rendered to true scale, with L · W · H · OD and fin pitch shown as dimension lines.</li>'
            + '<li>The staggered layout and the tube cross-section (inner diameter) are drawn as well, so you can <b>check the tube arrangement by eye</b>.</li>'
            + '<li>Choose plain or louver fins and the louver dimensions (Lp · Lh) appear together with the matching correlations.</li>',
-    'f1.cap': '① HX Dimension — L · W · H · OD and fin pitch in 3D',
+    'f1.cap': '① Geometry — L · W · H · OD and fin pitch in 3D',
 
-    'f2.h': 'Circuit — drawn by dragging',
+    'f2.h': 'Circuit — drag to connect tubes',
     'f2.ul': '<li>Drag tubes to connect them and build <b>splits and merges</b> (acyclic circuits).</li>'
            + '<li>Loops and duplicate connections are checked as you draw, and tubes left unconnected become <b>independent single-tube circuits</b> automatically.</li>'
-           + '<li>Flow distribution is either <b>uniform pressure drop (ΔP)</b> or an equal split.</li>',
-    'f2.cap': '② Circuit — colour = circuit · ★ = inlet · U-bends solid/dashed',
+           + '<li>Choose <b>equal pressure drop (ΔP)</b> or equal flow per branch.</li>',
+    'f2.cap': '② Circuit — color = circuit · ★ = inlet · U-bends solid/dashed',
 
-    'f3.h': 'Fluid — 70 working fluids',
+    'f3.h': 'Fluid — 70 tube-side fluids',
     'f3.ul': '<li>The air inlet state is set from the dry-bulb temperature plus one of <b>wet-bulb temperature, relative humidity, humidity ratio, enthalpy or dew point</b>.</li>'
-           + '<li>Pick the working fluid from <b>70</b> (water, air, R717, R744, R290, R410A, R134a, R1234yf, <b>EG/PG aqueous brines</b> and more) — properties come from CoolProp.</li>'
-           + '<li>The fluid inlet is specified in one of four ways: <b>(1) pressure · temperature</b>, <b>(2) pressure · vapour quality</b>, <b>(3) pressure · enthalpy</b>, <b>(4) outlet pressure · enthalpy</b> — water uses all four just like a refrigerant, while brines use (1) only.</li>'
+           + '<li>Choose from <b>70 tube-side fluids</b>, including water, air, R717, R744, R290, R410A, R134a, R1234yf, and <b>aqueous EG/PG solutions</b>. Properties are calculated with CoolProp.</li>'
+           + '<li>The fluid inlet is specified in one of four ways: <b>(1) pressure · temperature</b>, <b>(2) pressure · vapor quality</b>, <b>(3) pressure · enthalpy</b>, <b>(4) outlet pressure · enthalpy</b> — water supports all four, as refrigerants do; aqueous glycol solutions use (1) only.</li>'
            + '<li>Single-phase and two-phase heat transfer and pressure drop correlations are chosen separately.</li>',
-    'f3.cap': '③ Fluid — five ways to set the air inlet · 70 working fluids',
+    'f3.cap': '③ Fluid — five ways to set the air inlet · 70 tube-side fluids',
 
-    'f4.h': 'Air Distribution — fan non-uniformity included',
-    'f4.ul': '<li>The fan discharge profile — strong at the centre, weak at the edges — is reproduced with a <b>Gaussian model</b> (σ · floor · β), and the centre shift ratio C moves the peak up or down.</li>'
-           + '<li>Air flow is applied cell by cell across the inlet face.</li>'
+    'f4.h': 'Airflow — include fan nonuniformity',
+    'f4.ul': '<li>A <b>Gaussian model</b> (σ · floor · β) represents a fan profile that is strongest at the center and weaker at the edges; center-shift ratio C moves the peak up or down.</li>'
+           + '<li>Airflow is applied cell by cell across the inlet face.</li>'
            + '<li>Check the profile in the 2D/3D preview before it goes into the calculation.</li>',
-    'f4.cap': '④ Air Distribution — 3D face velocity at the coil inlet · non-uniformity tuned with fan σ · floor · β · C',
+    'f4.cap': '④ Airflow — 3D face velocity at the coil inlet; nonuniformity set by σ, floor, β, and C',
 
-    'f5.h': 'Performance summary — prediction cell by cell',
+    'f5.h': 'Performance — cell-by-cell prediction',
     'f5.ul': '<li>The coil is <b>divided into a grid in three directions</b> (height, depth and length) and solved cell by cell.</li>'
            + '<li>Local heat transfer and pressure drop are computed for each cell.</li>'
            + '<li>Under wet-surface conditions the <b>condensate (dehumidification) rate</b> is obtained.</li>'
            + '<li>Results are presented together with a psychrometric chart, a P–h diagram and the flow split per circuit.</li>',
-    'f5.cap': '⑤ Result (Performance) — summary · capacity · pressure drop · condensate',
+    'f5.cap': '⑤ Performance — summary · capacity · pressure drop · condensate',
 
-    'f6.h': 'Result (Map) — colour maps by face and row',
-    'f6.ul': '<li>Distributions are shown from the air inlet face through to the outlet face, row by row along the refrigerant tubes.</li>'
-           + '<li>Temperature, humidity, face velocity, pressure, flow rate and phase are colour-coded so you can <b>see at a glance where the distribution differs most</b>.</li>'
+    'f6.h': 'Maps — distributions by face and tube row',
+    'f6.ul': '<li>Maps show air conditions from the entering to the leaving face and tube-side conditions by tube row.</li>'
+           + '<li>Color maps of temperature, humidity ratio, face velocity, pressure, mass flow rate, and phase <b>show where conditions differ most</b>.</li>'
            + '<li>Choose a face or a row, and redraw the detail as a contour plot.</li>',
-    'f6.cap': '⑥ Result (Map) — distribution colour maps by face and row',
+    'f6.cap': '⑥ Maps — distribution color maps by face and tube row',
 
     'mob.h': 'The whole design on a phone',
-    'mob.p': 'The phone screen edits <b>geometry, circuitry, fluids, correlations and airflow</b> and shows the <b>performance summary and the face/row distributions</b>. Tap the [Quick start] example and geometry, circuit, operating conditions and its saved results are filled in at once — and the guided tutorial runs on the phone as well. It runs <b>the same calculation engine as the desktop</b>, so the results do not differ. Add it to your home screen and it opens like an app, without an address bar.',
+    'mob.p': 'On a phone, edit <b>geometry, circuiting, fluids, correlations, and airflow</b>, and view <b>performance and face/tube-row maps</b>. Select [Load example] to load geometry, circuiting, operating conditions, and saved results. The guided tour is also available on mobile. Mobile and desktop use <b>the same calculation engine</b>. Add the site to your home screen to open it like an app without the browser address bar.',
     'mob.c.edit': 'Geometry &amp; circuit editing', 'mob.c.tap': 'Tap to connect circuits',
     'mob.c.map': 'Face/row distribution', 'mob.c.xls': 'Excel template import/export', 'mob.c.home': 'Add to home screen',
     'mob.cap': 'Mobile screen',
 
     'spec.h': 'Calculation and input/output specifications',
     'spec.p': 'As of v1.0 (in beta testing).',
-    'spec.fluid.k': 'Working fluids',
-    'spec.fluid.v': '<b>70 fluids</b> — water · air · R717 (ammonia) · R744 (CO<sub>2</sub>) · R290 · R410A · R134a · R1234yf · <b>brines (12 EG/PG aqueous solutions)</b> and more<br><span style="font-size:14.5px; color:var(--text-muted)">Properties from CoolProp</span>',
+    'spec.fluid.k': 'Tube-side fluids',
+    'spec.fluid.v': '<b>70 fluids</b> — water · air · R717 (ammonia) · R744 (CO<sub>2</sub>) · R290 · R410A · R134a · R1234yf · <b>12 EG/PG aqueous glycol solutions</b> and more<br><span style="font-size:14.5px; color:var(--text-muted)">Properties from CoolProp</span>',
     'spec.air.k': 'Air side',
-    'spec.air.v': 'Heat transfer correlations <b>13</b> (plain fin 8 · louver fin 5) · pressure drop correlations 11 (plain fin 6 · louver fin 5) — selectable<br>Dry / wet surface (condensate) · non-uniform fan airflow · contact thermal resistance',
-    'spec.tube.k': 'Tube side',
+    'spec.air.v': '<b>13</b> selectable heat-transfer correlations (8 plain-fin, 5 louver-fin) and 11 pressure-drop correlations (6 plain-fin, 5 louver-fin)<br>Dry-coil and wet-coil conditions · nonuniform airflow · contact thermal resistance',
+    'spec.tube.k': 'Tube-side fluid',
     'spec.tube.v': 'Single-phase heat transfer and friction; two-phase condensation and evaporation heat transfer and pressure drop — correlations selectable',
-    'spec.cir.k': 'Circuitry',
-    'spec.cir.v': 'Drag editing · split/merge · unequal tube count per circuit allowed<br>Unconnected tubes become independent single-tube circuits automatically<br>Flow distribution: uniform pressure drop (ΔP) or equal split',
+    'spec.cir.k': 'Circuiting',
+    'spec.cir.v': 'Drag-to-connect editing · branches and merges · unequal tube counts allowed<br>Unconnected tubes become independent single-tube circuits automatically<br>Flow distribution: equal pressure drop (ΔP) or equal flow',
     'spec.inlet.k': 'Inlet specification',
-    'spec.inlet.v': '(1) pressure · temperature (single phase) · (2) pressure · vapour quality (two phase) · (3) pressure · enthalpy · (4) outlet pressure · enthalpy (the inlet pressure is back-calculated including the pressure drop)<br>Common to every working fluid including water · brines use (1) only',
+    'spec.inlet.v': '(1) pressure · temperature (single phase) · (2) pressure · vapor quality (two phase) · (3) pressure · enthalpy · (4) outlet pressure · enthalpy (the inlet pressure is back-calculated including the pressure drop)<br>Common to every tube-side fluid including water; aqueous glycol solutions use (1) only',
     'spec.res.k': 'Results',
-    'spec.res.v': 'Capacity Q (mean of refrigerant and air sides) · pressure drop ΔP · condensate · air and refrigerant inlet/outlet states · psychrometric chart · P–h diagram · face/row distribution colour maps',
+    'spec.res.v': 'Capacity Q (mean of tube-side and air-side values) · pressure drop ΔP · condensate rate · entering/leaving air and tube-side inlet/outlet states · psychrometric chart · P–h diagram · face/tube-row maps',
     'spec.file.k': 'Files',
-    'spec.file.v': 'Excel design template import and export · result export (geometry, circuit diagram, conditions, per-cell raw data — authorised access codes only)<br>Load a <b>result file</b> and the results are restored without recomputing',
+    'spec.file.v': 'Import and export Excel design templates · export results, including geometry, circuit diagram, conditions, and cell-level data (authorized access codes only)<br>Import a <b>result file</b> to restore its results without recalculating',
     'spec.env.k': 'Environment',
     'spec.env.v': 'Web browser (no installation) · dedicated mobile screen · light/dark theme · Korean/English',
     'spec.size.k': 'Sizing',
     'spec.size.v': 'Geometry candidates from a target load<span class="tag">planned</span>',
 
     'val.h': 'Checked against 117 in-house experimental cases',
-    'val.p': 'We publish, as it is, the range over which computed values were compared with measurements.',
-    'val.water': '<b>Water</b>plain / louver fin · 3 rows',
-    'val.r134a': '<b>R134a</b>plain fin · 3-row evaporator',
+    'val.p': 'The ranges below are the conditions over which predictions were compared with measurements.',
+    'val.water': '<b>Water</b> · plain and louver fins · 3 rows',
+    'val.r134a': '<b>R134a</b> · plain fin · 3-row evaporator',
     'val.r410a': '<b>R410A</b>high-pressure refrigerant conditions',
     'val.r1234yf': '<b>R1234yf</b>low-GWP refrigerant',
     'val.c1.h': 'Air-side correlations checked against the original papers',
@@ -129,30 +129,30 @@
 
     'for.h': 'Who this helps',
     'for.design.h': 'Heat exchanger design and analysis',
-    'for.design.p': 'Predict how an existing geometry performs, compare circuit arrangements and narrow the design down.',
+    'for.design.p': 'Predict the performance of an existing geometry, compare circuiting options, and narrow the design space.',
     'for.hp.h': 'Heat pump and air-conditioning development',
-    'for.hp.p': 'Change the refrigerant and the operating conditions and see quickly how coil performance moves.',
+    'for.hp.p': 'Change the refrigerant or operating conditions and quickly see how coil performance changes.',
     'for.test.h': 'Testing and performance verification',
-    'for.test.p': 'Compare your measured data with computed values and use it as a basis for interpreting the test results.',
+    'for.test.p': 'Compare measurements with predictions to help interpret test results.',
     'for.edu.h': 'University laboratories and teaching',
-    'for.edu.p': 'Show on screen how the circuit arrangement affects performance — a teaching tool.',
+    'for.edu.p': 'Demonstrate how circuiting affects performance for laboratory and classroom teaching.',
 
     'ct.h': 'Contact · collaboration',
-    'ct.p': 'Tell us your affiliation, your role and what you intend to use it for.',
+    'ct.p': 'Tell us your organization, role, and intended use.',
     'ct.lbl': 'Contact · collaboration',
     'ct.who1': 'Jinwoo Yoo, Principal Researcher',
     'ct.who2': 'Chanho Song, Principal Researcher',
     'ct.ask': '<li>Institution · department</li><li>Your role</li><li>Intended use (design review / research / teaching)</li>',
-    'ct.mail': 'Send an e-mail',
-    'ct.app': 'Program address <a href="https://hexcoil.kr" target="_blank" rel="noopener">hexcoil.kr</a> — take a look straight away with <b>Look around without registering</b>. The <b>access code</b> needed for calculations can be requested on the start page under [Request an access code].',
-    'ct.trial': 'Access codes are issued for feature review, research and teaching, with a set number of calculations and a validity period. Commercial use such as product design or bidding requires a separate licence agreement.',
+    'ct.mail': 'Send an email',
+    'ct.app': 'Program address <a href="https://hexcoil.kr" target="_blank" rel="noopener">hexcoil.kr</a> — take a look straight away with <b>Try as a guest</b>. The <b>access code</b> needed for calculations can be requested on the start page under [Request access].',
+    'ct.trial': 'Access codes are issued for feature review, research and teaching, with a set number of calculations and a validity period. Commercial use such as product design or bidding requires a separate license agreement.',
     'ct.work.h': 'What we can do together',
     'ct.w.pred.h': 'Performance prediction review',
     'ct.w.pred.p': 'We predict the performance of your heat exchanger geometry and interpret the results with you.',
     'ct.w.impr.h': 'Design improvement',
-    'ct.w.impr.p': 'We compare circuit arrangements and look for the direction of improvement.',
+    'ct.w.impr.p': 'We compare circuiting options and identify potential design improvements.',
     'ct.w.cmp.h': 'Comparison with test data',
-    'ct.w.cmp.p': 'We support comparison and interpretation against test data you already hold.',
+    'ct.w.cmp.p': 'We help compare predictions with your test data and interpret the differences.',
     'ct.w.coop.h': 'Joint research · technology transfer',
     'ct.w.coop.p': 'We discuss feature extensions and ways to work together.',
 
@@ -160,9 +160,9 @@
     'ftr.cite': 'How to cite',
     'ftr.citeorg': ', Korea Institute of Machinery &amp; Materials (KIMM), Heat Pump Research Center (2026)',
     'ftr.copy': 'Copyright © 2026 Korea Institute of Machinery &amp; Materials (KIMM), Heat Pump Research Center. All rights reserved.',
-    'ftr.terms': '<strong>Terms of use</strong> — the edition offered today is an <strong>evaluation and educational trial</strong>, permitted temporarily for feature review, research and teaching only. Being provided at no charge does not grant a perpetual right of use, and commercial use such as product design or bidding requires a separate licence agreement.',
+    'ftr.terms': '<strong>Terms of use</strong> — the edition offered today is an <strong>evaluation and educational trial</strong>, permitted temporarily for feature review, research and teaching only. Being provided at no charge does not grant a perpetual right of use, and commercial use such as product design or bidding requires a separate license agreement.',
     'ftr.disc': '<strong>Disclaimer</strong> — this program is a <strong>reference tool</strong> that supports design review. It does not guarantee the computed results, and decisions on real equipment require separate verification.',
-    'ftr.oss': '<strong>Open-source notice</strong> — this program includes open-source components such as Flask · CoolProp · NumPy · pandas · openpyxl · matplotlib · Pillow · qrcode, each under its own licence (BSD-3-Clause · MIT · Apache-2.0 · HPND and others). The full list and the licence texts are available on the notice screen inside the program.',
+    'ftr.oss': '<strong>Open-source notice</strong> — this program includes open-source components such as Flask · CoolProp · NumPy · pandas · openpyxl · matplotlib · Pillow · qrcode, each under its own license (BSD-3-Clause · MIT · Apache-2.0 · HPND and others). The full list and the license texts are available on the notice screen inside the program.',
     'ftr.priv': 'This introduction page uses no third-party scripts, tracking tools or web fonts.',
 
     /*  1분 소개 영상(2026-10-05(3) — 영문 화면은 영문 영상 intro-en.mp4) */
@@ -178,28 +178,28 @@
   var EN_M = {
     'vid.bar': '64 s \u00b7 no sound \u00b7 turn your phone sideways',
     'hero.tagline': 'Design freely,<br>read the results at a glance.',
-    'spec.fluid.v': '<b>70 fluids</b> \u2014 water \u00b7 air \u00b7 R717 (ammonia) \u00b7 R744 (CO<sub>2</sub>) \u00b7 R290 \u00b7 R410A \u00b7 R134a \u00b7 R1234yf \u00b7 <b>brines (12 EG/PG aqueous solutions)</b> and more<br><span style="font-size:13px; color:var(--gray-500)">Properties from CoolProp</span>'
+    'spec.fluid.v': '<b>70 fluids</b> \u2014 water \u00b7 air \u00b7 R717 (ammonia) \u00b7 R744 (CO<sub>2</sub>) \u00b7 R290 \u00b7 R410A \u00b7 R134a \u00b7 R1234yf \u00b7 <b>12 EG/PG aqueous glycol solutions</b> and more<br><span style="font-size:13px; color:var(--gray-500)">Properties from CoolProp</span>'
   };
 
   var ATTR_EN = { 'nav.menu': 'Main menu', 'vid.dlg': 'KIMM-HEX Coil 1-minute introduction video' };
   var ALT_EN  = { 'brand.kimm': 'Korea Institute of Machinery & Materials',
     /*  화면 캡처 대체 텍스트(2026-09-27) — 영문 화면에서 한국어로 남아 있었다 */
-    'shot.dimension': 'Geometry input screen — the fin-tube heat exchanger is rendered in 3D with dimension lines for length, width, height and outer diameter.',
-    'shot.circuit': 'Circuit editor — refrigerant circuits are drawn in different colours on the tube grid, and stars mark the inlets.',
-    'shot.fluid': 'Fluid conditions screen — air-side and working-fluid inlet conditions and the correlation choices are laid out in two columns.',
-    'shot.airflow': '3D air-flow distribution — face velocity over the coil inlet face is shown as a 3D surface, fastest in the centre and slower at the edges.',
+    'shot.dimension': 'Geometry screen — the fin-tube coil is shown in 3D with dimension lines for length, width, height, and tube OD.',
+    'shot.circuit': 'Circuit editor — refrigerant circuits are drawn in different colors on the tube grid, and stars mark the inlets.',
+    'shot.fluid': 'Fluid conditions screen — air-side and tube-side fluid inlet conditions and the correlation choices are laid out in two columns.',
+    'shot.airflow': '3D airflow profile — face velocity at the entering coil face is highest at the center and lower at the edges.',
     'shot.result1': 'Performance summary — capacity and pressure-drop KPIs, a psychrometric chart and a P-h diagram.',
-    'shot.result2': 'Face and column distributions — the heat exchanger cross-section is shown as a colour map of temperature.',
+    'shot.result2': 'Face and tube-row distributions — the heat exchanger cross-section is shown as a color map of temperature.',
     'shot.mobile': 'Mobile screen — KPI cards of the latest calculation and a case summary stacked vertically.' };
 
   var META_EN = {
     desktop: {
       title: 'KIMM-HEX Coil \u2014 Fin-tube heat exchanger design and performance prediction | KIMM',
-      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 117 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
+      desc: 'Design a fin-tube coil and predict capacity, pressure drop, and condensate rate in your browser. Supports 70 tube-side fluids, including aqueous glycol solutions, and 13 air-side heat-transfer correlations. Validated against 117 in-house experimental cases. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
     },
     mobile: {
       title: 'KIMM-HEX Coil \u2014 Fin-tube heat exchanger design and performance prediction | KIMM',
-      desc: 'Enter the geometry, refrigerant circuitry and operating conditions and obtain capacity, pressure drop and condensate. 70 working fluids including brines, 13 air-side heat transfer correlations, validated against 117 in-house experimental cases, and no installation - it runs in a web browser. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
+      desc: 'Design a fin-tube coil and predict capacity, pressure drop, and condensate rate in your browser. Supports 70 tube-side fluids, including aqueous glycol solutions, and 13 air-side heat-transfer correlations. Validated against 117 in-house experimental cases. Heat Pump Research Center, Korea Institute of Machinery & Materials.'
     }
   };
 
