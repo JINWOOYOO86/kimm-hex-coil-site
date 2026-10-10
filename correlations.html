@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  상관식 목록(2026-10-10) — 검색 노출용 주제 페이지. 소개 페이지(index.html·m.html)의 '계산 · 입출력 사양' 절에서 연결한다.
+      ⚠️ 목록은 프로그램 코드가 단일 기준이다: 공기측 = app/hx_core.py 의 AIR_HTC_LIST_* · AIR_DP_LIST_*,
+         관내측 = app/HX_functions.py 의 REF_*_LIST. 상관식을 더하거나 빼면 이 페이지와 소개 페이지 사양 표(13종·11종)를 함께 고칠 것.
+      ⚠️ 이 페이지는 GitHub Pages 와 hexcoil.kr/about/ 두 곳에서 열린다 — canonical 은 hexcoil.kr 쪽. -->
+<title>핀튜브 열교환기 상관식 목록 — 공기측·관내측 열전달·압력강하 | KIMM-HEX Coil</title>
+<meta name="description" content="KIMM-HEX Coil 이 핀튜브 열교환기 성능 계산에 쓰는 상관식 전체 목록. 공기측 열전달 13종(평판핀 8 · 루버핀 5)과 압력강하 11종, 관내 단상 열전달·마찰, 응축·증발 열전달, 2상 압력강하 상관식을 항목마다 골라 계산합니다.">
+<meta name="author" content="한국기계연구원 히트펌프연구센터">
+<meta name="theme-color" content="#1B3281">
+<link rel="canonical" href="https://hexcoil.kr/about/correlations.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="핀튜브 열교환기 상관식 목록 — KIMM-HEX Coil">
+<meta property="og:description" content="공기측 열전달 13종 · 압력강하 11종 · 관내 단상/응축/증발/2상 압력강하 상관식. 한국기계연구원 히트펌프연구센터.">
+<meta property="og:url" content="https://hexcoil.kr/about/correlations.html">
+<meta property="og:image" content="https://hexcoil.kr/about/assets/og-desktop.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexcoil.kr/about/assets/og-desktop.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+  {"@type": "TechArticle", "headline": "핀튜브 열교환기 상관식 목록 — 공기측·관내측 열전달·압력강하",
+   "inLanguage": "ko", "url": "https://hexcoil.kr/about/correlations.html",
+   "about": {"@type": "WebApplication", "name": "KIMM-HEX Coil", "url": "https://hexcoil.kr/"},
+   "publisher": {"@type": "Organization", "name": "한국기계연구원 히트펌프연구센터",
+                 "alternateName": "KIMM Heat Pump Research Center"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "KIMM-HEX Coil", "item": "https://hexcoil.kr/about/"},
+    {"@type": "ListItem", "position": 2, "name": "상관식 목록", "item": "https://hexcoil.kr/about/correlations.html"}]}
+]}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='13' fill='%231B3281'/><g transform='translate(8,10)'><g stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' opacity='.58'><path d='M12 5V39M18 5V39M24 5V39M30 5V39M36 5V39'/></g><path d='M38 13H10A4.5 4.5 0 0 0 10 22H38A4.5 4.5 0 0 1 38 31H10' fill='none' stroke='%23FFFFFF' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/></g></svg>">
+<style>
+/* KIMM Design System 토큰 — index.html 과 같은 값(제3자 CSS·JS·웹폰트 없음) */
+:root{
+  --kimm-blue:#1B3281; --blue-50:#EEF1F8; --blue-100:#D6DEEF; --blue-200:#AEBCDD; --blue-500:#3551A0;
+  --gray-50:#F7F8FA; --gray-100:#EDEFF3; --gray-200:#DDE1E8; --gray-300:#C4CAD6;
+  --gray-500:#6B7280; --gray-600:#4B5260; --gray-700:#353B47; --gray-900:#12151B; --white:#FFFFFF;
+  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo",
+              "Malgun Gothic","맑은 고딕","Noto Sans KR",sans-serif;
+  --maxw:960px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--white); color:var(--gray-700); font-family:var(--font-sans);
+     font-size:16.5px; line-height:1.7; word-break:keep-all; overflow-wrap:break-word}
+a{color:var(--kimm-blue); text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--blue-500); outline-offset:3px; border-radius:4px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+.hdr{border-bottom:1px solid var(--gray-200); background:var(--white)}
+.hdr .wrap{display:flex; align-items:center; gap:14px; min-height:62px; flex-wrap:wrap; padding-top:8px; padding-bottom:8px}
+.hdr .home{display:flex; align-items:center; gap:12px; min-width:0}
+.hdr .home img{height:24px; width:auto; display:block}
+.hdr .div{width:1px; height:18px; background:var(--gray-300)}
+.hdr .pname{height:14px !important}
+.hdr .cta{margin-left:auto; font-size:14.5px; font-weight:700; color:#fff; background:var(--kimm-blue);
+          padding:8px 16px; border-radius:999px; white-space:nowrap}
+.hdr .cta:hover{text-decoration:none; background:var(--blue-500)}
+
+.crumb{font-size:14px; color:var(--gray-500); margin:26px 0 0}
+h1{font-size:clamp(25px, 4.4vw, 34px); line-height:1.3; letter-spacing:-.025em; color:var(--gray-900); margin:8px 0 0}
+.lede{margin:14px 0 0; font-size:17px}
+.lede-en{margin:6px 0 0; font-size:14.5px; color:var(--gray-500)}
+.note{margin:22px 0 0; padding:14px 18px; background:var(--blue-50); border:1px solid var(--blue-100);
+      border-radius:10px; font-size:15px}
+
+h2{font-size:21px; letter-spacing:-.02em; color:var(--gray-900); margin:46px 0 4px; line-height:1.4}
+h2 .en{display:block; font-size:13.5px; font-weight:600; color:var(--gray-500); letter-spacing:0}
+.sec-p{margin:6px 0 0; font-size:15.5px; color:var(--gray-600)}
+table{width:100%; border-collapse:collapse; margin-top:14px; font-size:15.5px;
+      border:1px solid var(--gray-200); border-radius:10px; overflow:hidden}
+th,td{padding:11px 14px; text-align:left; vertical-align:top; border-top:1px solid var(--gray-200)}
+thead th{background:var(--gray-50); font-size:13.5px; color:var(--gray-600); font-weight:700; border-top:none}
+tbody th{width:200px; color:var(--gray-900); font-weight:700; background:var(--white)}
+td ol{margin:0; padding-left:1.3em}
+td li{margin:1px 0}
+.cnt{display:inline-block; min-width:2.2em; font-weight:700; color:var(--kimm-blue)}
+
+.more{margin:44px 0 0; display:flex; gap:10px; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; font-size:15px; font-weight:700; border-radius:999px;
+     padding:10px 18px; border:1.5px solid var(--blue-200); color:var(--kimm-blue); background:var(--white)}
+.btn:hover{text-decoration:none; border-color:var(--kimm-blue); background:var(--blue-50)}
+.btn-primary{background:var(--kimm-blue); color:#fff; border-color:var(--kimm-blue)}
+.btn-primary:hover{background:var(--blue-500); border-color:var(--blue-500)}
+
+.ftr{margin-top:64px; padding:26px 0 40px; border-top:1px solid var(--gray-200); font-size:14px; color:var(--gray-500)}
+
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .hdr .ctr{display:none}
+  tbody th{width:auto; display:block; border-bottom:none; padding-bottom:2px}
+  tbody td{display:block; border-top:none; padding-top:0}
+  tbody tr{display:block; border-top:1px solid var(--gray-200)}
+  tbody tr:first-child{border-top:none}
+  thead{display:none}
+  table{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="home" href="./" aria-label="KIMM-HEX Coil 소개 페이지">
+      <img src="assets/kimm-logo-kr.svg" alt="한국기계연구원">
+      <span class="div" aria-hidden="true"></span>
+      <img class="pname" src="assets/wordmark-kimm-hex-coil.svg" alt="KIMM-HEX Coil">
+    </a>
+    <a class="cta" href="https://hexcoil.kr/demo" target="_blank" rel="noopener">프로그램 둘러보기 ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumb"><a href="./">KIMM-HEX Coil 소개</a> › 상관식 목록</p>
+  <h1>핀튜브 열교환기 상관식 목록</h1>
+  <p class="lede"><b>KIMM-HEX Coil</b>(핀튜브 열교환기 설계·성능예측 프로그램)이 성능 계산에 쓰는 상관식입니다.
+    공기측과 관내측(튜브 안)의 열전달·압력강하를 <b>항목마다 골라</b> 계산하고, 같은 형상에서 상관식을 바꿔 결과를 비교할 수 있습니다.</p>
+  <p class="lede-en" lang="en">Correlations used by KIMM-HEX Coil for fin-tube heat exchanger performance prediction:
+    air-side heat transfer and pressure drop for plain and louver fins, and tube-side single-phase, condensation,
+    evaporation, and two-phase pressure-drop correlations. Each item can be selected in the app.</p>
+  <p class="note">화면은 작동유체(냉매 / 물·부동액)와 핀 형상(평판 / 루버)에 맞춰, 자체 실험 데이터와 대조해 고른
+    조합을 <b>먼저 추천</b>합니다. 추천을 그대로 써도 되고 다른 상관식으로 바꿔도 됩니다.</p>
+
+  <h2>공기측 열전달 · 13종<span class="en" lang="en">Air-side heat transfer — 13 correlations</span></h2>
+  <p class="sec-p">핀·튜브 바깥을 지나는 공기 쪽 열전달계수를 구합니다.</p>
+  <table>
+    <thead><tr><th scope="col">핀 형상</th><th scope="col">상관식</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">평판핀 <span class="cnt">8</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Plain fin</span></th>
+        <td><ol>
+          <li>Wang et al. (2000)</li><li>Wang et al. (1996)</li><li>Wang et al. (1997)</li><li>Kim et al. (1999)</li>
+          <li>Tang et al. (2009)</li><li>Mihailovic et al. (2020)</li><li>Kim and Kim (2005)</li><li>Kayansayan (1993)</li>
+        </ol></td></tr>
+      <tr><th scope="row">루버핀 <span class="cnt">5</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Louver fin</span></th>
+        <td><ol>
+          <li>Wang et al. (1999)</li><li>Achaichia and Cowell (1988)</li><li>Wang et al. (1998)</li>
+          <li>Wang et al. (2000)</li><li>Sadeghianjahromi et al. (2018)</li>
+        </ol></td></tr>
+    </tbody>
+  </table>
+
+  <h2>공기측 압력강하 · 11종<span class="en" lang="en">Air-side pressure drop — 11 correlations</span></h2>
+  <p class="sec-p">핀 사이를 지나는 공기의 압력강하를 구합니다.</p>
+  <table>
+    <thead><tr><th scope="col">핀 형상</th><th scope="col">상관식</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">평판핀 <span class="cnt">6</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Plain fin</span></th>
+        <td><ol>
+          <li>Wang et al. (2000)</li><li>Wang et al. (1996)</li><li>Wang et al. (1997)</li><li>Kim et al. (1999)</li>
+          <li>Tang et al. (2009)</li><li>Jacimovic et al. (2006)</li>
+        </ol></td></tr>
+      <tr><th scope="row">루버핀 <span class="cnt">5</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Louver fin</span></th>
+        <td><ol>
+          <li>Wang et al. (1999)</li><li>Achaichia and Cowell (1988)</li><li>Wang et al. (1998)</li>
+          <li>Wang et al. (2000)</li><li>Sadeghianjahromi et al. (2018)</li>
+        </ol></td></tr>
+    </tbody>
+  </table>
+
+  <h2>관내측(튜브 안) 상관식<span class="en" lang="en">Tube-side correlations</span></h2>
+  <p class="sec-p">냉매·물·부동액이 흐르는 튜브 안쪽입니다. 단상 구간과 2상(응축·증발) 구간을 나눠 계산합니다.</p>
+  <table>
+    <thead><tr><th scope="col">항목</th><th scope="col">상관식</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">단상 열전달 <span class="cnt">4</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Single-phase heat transfer</span></th>
+        <td><ol><li>Gnielinski (1976)</li><li>Dittus–Boelter (1930)</li><li>Colburn (1933)</li><li>Sieder–Tate (1936)</li></ol></td></tr>
+      <tr><th scope="row">단상 마찰 <span class="cnt">3</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Single-phase friction</span></th>
+        <td><ol><li>Colebrook</li><li>Petukhov (1970)</li><li>Blasius</li></ol></td></tr>
+      <tr><th scope="row">응축 열전달 <span class="cnt">4</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Condensation</span></th>
+        <td><ol><li>Shah (1979)</li><li>Dobson and Chato (1998)</li><li>Cavallini and Zecchin (1974)</li><li>Akers et al. (1959)</li></ol></td></tr>
+      <tr><th scope="row">증발 열전달 <span class="cnt">4</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Evaporation</span></th>
+        <td><ol><li>Jung et al. (1989)</li><li>Gungor and Winterton (1987)</li><li>Kandlikar (1990)</li><li>Liu and Winterton (1991)</li></ol></td></tr>
+      <tr><th scope="row">2상 압력강하 <span class="cnt">3</span><br><span lang="en" style="font-weight:600;color:var(--gray-500);font-size:13px">Two-phase pressure drop</span></th>
+        <td><ol><li>Müller-Steinhagen and Heck (1986)</li><li>Friedel (1979)</li><li>Lockhart–Martinelli (1949)</li></ol></td></tr>
+    </tbody>
+  </table>
+
+  <div class="more">
+    <a class="btn btn-primary" href="https://hexcoil.kr/demo" target="_blank" rel="noopener">등록 없이 둘러보기 ↗</a>
+    <a class="btn" href="./#spec">계산 · 입출력 사양</a>
+    <a class="btn" href="./#validation">자체 실험 검증</a>
+    <a class="btn" href="./#contact">문의 · 협력 제안</a>
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    KIMM-HEX Coil · 한국기계연구원 히트펌프연구센터 · 대전광역시 유성구 가정북로 156 ·
+    <a href="mailto:jwyoo@kimm.re.kr">jwyoo@kimm.re.kr</a>
+  </div>
+</footer>
+</body>
+</html>

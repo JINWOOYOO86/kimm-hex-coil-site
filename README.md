@@ -32,6 +32,22 @@ capture_ui.py → build_assets.py → 홍보자료/assets/*.png → build_site_a
 2. GitHub 에 public 저장소 생성 후 push
 3. Settings → Pages → Source: `Deploy from a branch` → `main` / `(root)`
 
+## hexcoil.kr/about/ 에서도 연다 — 검색 노출 (2026-10-10)
+
+같은 사이트를 **GitHub Pages** 와 **https://hexcoil.kr/about/** 두 곳에서 연다. 소개 내용으로 쌓이는 검색 평판을
+프로그램 도메인 한 곳에 모으려는 것이다.
+
+- 두 판 모두 `canonical` 이 hexcoil.kr 쪽을 원본으로 알린다(`index.html`·`m.html` → `/about/`, `correlations.html` → 자기 주소).
+  `og:url`·`og:image` 도 hexcoil.kr 절대 주소다.
+- **게시 순서**: 커밋 → 프로그램 저장소에서 `deploy/push_site.sh root@1.234.80.29`(이 저장소의 **커밋된 HEAD** 를 서버
+  `/var/www/hexcoil-site` 에 푼다, nginx 정적) → `git push`(GitHub Pages). 서버가 먼저여야 공유 미리보기 그림이 안 깨진다.
+- `correlations.html` — 상관식 목록(주제 페이지). 목록의 기준은 프로그램 코드(`app/hx_core.py`·`app/HX_functions.py`)다.
+  상관식을 더하거나 빼면 이 페이지와 사양 표(13종·11종)를 함께 고친다.
+- 사이트맵·robots.txt 는 프로그램(hexcoil.kr)이 낸다 — 새 주제 페이지를 만들면 프로그램 `app/auth.py` 의 `SITEMAP_EXTRA` 에 경로를 더한다.
+- 제목(`h1`)은 워드마크 그림이라 제품 설명 글자를 `.sr-only` 로 숨겨 함께 둔다(검색엔진·화면 낭독기용).
+- `site-i18n.js` 는 검색 로봇이면 브라우저 언어와 상관없이 한국어(HTML 원문)로 둔다 — 구글 렌더러는 en-US 라
+  종전 규칙대로면 영문으로 색인됐다.
+
 ## 한국어 / English 전환 (2026-09-17)
 
 **`index.html`(데스크톱)과 `m.html`(모바일)이 `site-i18n.js` 한 벌을 함께 쓴다.**

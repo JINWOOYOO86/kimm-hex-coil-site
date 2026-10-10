@@ -24,6 +24,7 @@
     'nav.app': 'Try it ↗', 'nav.contact': 'Request access',
 
     'hero.eyebrow': 'Fin-tube heat exchanger design and performance prediction software',
+    'hero.h1sub': ' \u2014 fin-tube heat exchanger design and performance prediction',
     'hero.tagline': 'Design freely. Read the results at a glance.',
     'hero.deffn': 'Geometry, refrigerant circuiting, operating conditions<span class="ar">→</span>capacity, pressure drop, condensate rate',
     'hero.lede': '<b>Build the geometry and circuiting yourself</b>. The app validates the circuit before calculating performance. It runs in your browser, with nothing to install.',
@@ -115,6 +116,7 @@
     'spec.env.v': 'Web browser (no installation) · dedicated mobile screen · light/dark theme · Korean/English',
     'spec.size.k': 'Sizing',
     'spec.size.v': 'Geometry candidates from a target load<span class="tag">planned</span>',
+    'spec.more': 'Full list of air-side and tube-side correlations \u2192',
 
     'val.h': 'Checked against 117 in-house experimental cases',
     'val.p': 'The ranges below are the conditions over which predictions were compared with measurements.',
@@ -275,7 +277,10 @@
   var qm = /[?&]lang=(en|ko)\b/.exec(location.search);
   if (qm) saved = qm[1];
   var navLang = (navigator.language || navigator.userLanguage || 'ko').toLowerCase();
-  apply(saved || (navLang.indexOf('ko') === 0 ? 'ko' : 'en'));
+  /*  검색 로봇은 HTML 원문(한국어) 그대로 둔다(2026-10-10) — 구글 렌더러는 브라우저 언어가 en-US 라
+      위 규칙대로면 한국어 페이지를 영문으로 바꿔 색인한다. ?lang=en 으로 오면 그때만 영문. */
+  var isBot = /bot|crawl|spider|slurp|yeti|daum|bingpreview|lighthouse/i.test(navigator.userAgent || '');
+  apply(saved || ((isBot || navLang.indexOf('ko') === 0) ? 'ko' : 'en'));
 
   if (btn) btn.addEventListener('click', function () {
     apply(document.documentElement.lang === 'en' ? 'ko' : 'en');

@@ -10,16 +10,16 @@
 <meta property="og:title" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램">
 <meta property="og:description" content="설계는 자유롭게, 결과는 직관적으로. 한국기계연구원 히트펌프연구센터.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/m.html">
+<meta property="og:url" content="https://hexcoil.kr/about/m.html">
 <!--  공유 썸네일(2026-09-06): 정사각 카드(og-mobile.png). 생성·설명은 index.html 과 같다. -->
-<meta property="og:image" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/assets/og-mobile.png">
+<meta property="og:image" content="https://hexcoil.kr/about/assets/og-mobile.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
 <meta property="og:image:alt" content="KIMM-HEX Coil — 핀튜브 열교환기 설계·성능예측 프로그램: 냉매 회로 편집 · 격자 단위 성능 예측 · 팬 풍량 비균일 · 면/열별 컬러맵">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jinwooyoo86.github.io/kimm-hex-coil-site/assets/og-mobile.png">
+<meta name="twitter:image" content="https://hexcoil.kr/about/assets/og-mobile.png">
 <!--  검색엔진에는 데스크톱 판이 정본임을 알린다(모바일 별도 URL 의 표준 처리). -->
-<link rel="canonical" href="https://jinwooyoo86.github.io/kimm-hex-coil-site/">
+<link rel="canonical" href="https://hexcoil.kr/about/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='13' fill='%231B3281'/><g transform='translate(8,10)'><g stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' opacity='.58'><path d='M12 5V39M18 5V39M24 5V39M30 5V39M36 5V39'/></g><path d='M38 13H10A4.5 4.5 0 0 0 10 22H38A4.5 4.5 0 0 1 38 31H10' fill='none' stroke='%23FFFFFF' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/></g></svg>">
 <style>
 /* ============================================================
@@ -151,6 +151,10 @@ h2{margin:0; font-size:21px; line-height:1.3; font-weight:800; letter-spacing:-.
 .spec td{display:block; padding:0 13px 11px; color:var(--gray-600); line-height:1.6}
 .spec tr{display:block; border-top:1px solid var(--gray-200)}
 .spec tr:first-child{border-top:none}
+.spec-more{margin:14px 0 0; font-size:14.5px; font-weight:700}
+/* 화면에는 안 보이고 검색엔진·화면 낭독기만 읽는 글자(2026-10-10, 제목의 제품 설명) */
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+h1.wmrow{font-size:inherit; font-weight:inherit; line-height:0}
 .spec td b{color:var(--gray-900)}
 .tag{display:inline-block; font-size:11px; font-weight:700; color:var(--kimm-red);
   background:#FDECEC; padding:2px 7px; border-radius:5px; margin-left:5px}
@@ -281,9 +285,9 @@ html[lang="en"] .shot .clip-en{display:block}
   <div class="hero">
     <div class="wrap">
       <span class="eyebrow" data-i18n="hero.eyebrow">핀튜브 열교환기 설계·성능예측 프로그램</span>
-      <div class="wmrow">
-        <img class="wm" src="assets/wordmark-kimm-hex-coil.svg" alt="KIMM-HEX Coil">
-      </div>
+      <h1 class="wmrow">
+        <img class="wm" src="assets/wordmark-kimm-hex-coil.svg" alt="KIMM-HEX Coil"><span class="sr-only" data-i18n="hero.h1sub"> — 핀튜브 열교환기 설계·성능예측 프로그램</span>
+      </h1>
       <p class="tagline" data-i18n="hero.tagline">설계는 자유롭게,<br>결과는 직관적으로.</p>
       <p class="deffn" data-i18n="hero.deffn">형상·냉매 회로·운전 조건 입력<span class="ar">→</span>용량 · 압력강하 · 제습량 산출</p>
       <p class="lede" data-i18n="hero.lede"><b>형상과 회로를 직접 구성</b>하고, 유효성 검사를 통과한 회로로
@@ -499,6 +503,7 @@ html[lang="en"] .shot .clip-en{display:block}
           <tr><th data-i18n="spec.size.k">Sizing</th><td data-i18n="spec.size.v">목표 부하로부터 형상 후보 산출<span class="tag">개발 예정</span></td></tr>
         </tbody>
       </table>
+      <p class="spec-more"><a href="correlations.html" data-i18n="spec.more">공기측·관내측 상관식 전체 목록 →</a></p>
     </div>
   </section>
 
